@@ -1,0 +1,577 @@
+desc: (none)
+cmd: ./measure
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=5245334730
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=9085831530
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=13286442501
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=19581249606
+mem_heap_B=12001024
+mem_heap_extra_B=1232
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=24607949551
+mem_heap_B=16001024
+mem_heap_extra_B=3024
+mem_stacks_B=0
+heap_tree=detailed
+n2: 16001024 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 16000000 0x10976C: measureDynamicMemoryAccess (in /mnt/c/Users/butas/OneDrive/Documents/AN3/SCS/C measurements/measure)
+  n0: 16000000 0x10A28B: main (in /mnt/c/Users/butas/OneDrive/Documents/AN3/SCS/C measurements/measure)
+ n0: 1024 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=27808351851
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=31008754151
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=34209156451
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=37409558751
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=42650286414
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=46650786314
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=50651286214
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1024 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1024 0x49BDBA3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x49CCCDF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x49CBF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x49CA6D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x49CA6D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x49B414C: outstring_func (vfprintf-internal.c:239)
+       n1: 1024 0x49B414C: __vfprintf_internal (vfprintf-internal.c:1263)
+        n1: 1024 0x499F79E: printf (printf.c:33)
+         n0: 1024 0x10A518: main (in /mnt/c/Users/butas/OneDrive/Documents/AN3/SCS/C measurements/measure)
+ n0: 0 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=13
+#-----------
+time=54651786114
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=60692611820
+mem_heap_B=24001024
+mem_heap_extra_B=2512
+mem_stacks_B=0
+heap_tree=detailed
+n2: 24001024 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 24000000 0x10976C: measureDynamicMemoryAccess (in /mnt/c/Users/butas/OneDrive/Documents/AN3/SCS/C measurements/measure)
+  n0: 24000000 0x10A28B: main (in /mnt/c/Users/butas/OneDrive/Documents/AN3/SCS/C measurements/measure)
+ n0: 1024 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=15
+#-----------
+time=64881149575
+mem_heap_B=24001024
+mem_heap_extra_B=2512
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=68241567895
+mem_heap_B=24001024
+mem_heap_extra_B=2512
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=71601986215
+mem_heap_B=24001024
+mem_heap_extra_B=2512
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=74962404535
+mem_heap_B=24001024
+mem_heap_extra_B=2512
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=78322822855
+mem_heap_B=24001024
+mem_heap_extra_B=2512
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=81683241175
+mem_heap_B=24001024
+mem_heap_extra_B=2512
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=84735675420
+mem_heap_B=28001024
+mem_heap_extra_B=208
+mem_stacks_B=0
+heap_tree=detailed
+n2: 28001024 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 28000000 0x10976C: measureDynamicMemoryAccess (in /mnt/c/Users/butas/OneDrive/Documents/AN3/SCS/C measurements/measure)
+  n0: 28000000 0x10A28B: main (in /mnt/c/Users/butas/OneDrive/Documents/AN3/SCS/C measurements/measure)
+ n0: 1024 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=22
+#-----------
+time=88096092540
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=91456509660
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=94816926780
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=98177343900
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=101537761020
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1024 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1024 0x49BDBA3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x49CCCDF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x49CBF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x49CA6D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x49CA6D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x49B414C: outstring_func (vfprintf-internal.c:239)
+       n1: 1024 0x49B414C: __vfprintf_internal (vfprintf-internal.c:1263)
+        n1: 1024 0x499F79E: printf (printf.c:33)
+         n0: 1024 0x10A518: main (in /mnt/c/Users/butas/OneDrive/Documents/AN3/SCS/C measurements/measure)
+ n0: 0 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=27
+#-----------
+time=104898178140
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=109658769060
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=115979624577
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=122380417477
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=125580813927
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=128781210377
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1024 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1024 0x49BDBA3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x49CCCDF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x49CBF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x49CA6D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x49CA6D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x49B414C: outstring_func (vfprintf-internal.c:239)
+       n1: 1024 0x49B414C: __vfprintf_internal (vfprintf-internal.c:1263)
+        n1: 1024 0x499F79E: printf (printf.c:33)
+         n0: 1024 0x10A518: main (in /mnt/c/Users/butas/OneDrive/Documents/AN3/SCS/C measurements/measure)
+ n0: 0 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=33
+#-----------
+time=131981606827
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=135182003277
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=138382399727
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=141582796177
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=144823269504
+mem_heap_B=36001024
+mem_heap_extra_B=3792
+mem_stacks_B=0
+heap_tree=detailed
+n2: 36001024 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 36000000 0x10976C: measureDynamicMemoryAccess (in /mnt/c/Users/butas/OneDrive/Documents/AN3/SCS/C measurements/measure)
+  n0: 36000000 0x10A28B: main (in /mnt/c/Users/butas/OneDrive/Documents/AN3/SCS/C measurements/measure)
+ n0: 1024 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=38
+#-----------
+time=148063670274
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=151304071044
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=154544471814
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=157784872584
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=161025273354
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1024 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1024 0x49BDBA3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x49CCCDF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x49CBF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x49CA6D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x49CA6D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x49B414C: outstring_func (vfprintf-internal.c:239)
+       n1: 1024 0x49B414C: __vfprintf_internal (vfprintf-internal.c:1263)
+        n1: 1024 0x499F79E: printf (printf.c:33)
+         n0: 1024 0x10A518: main (in /mnt/c/Users/butas/OneDrive/Documents/AN3/SCS/C measurements/measure)
+ n0: 0 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=43
+#-----------
+time=164265674124
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=167506074894
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=170746475664
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=173986876434
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=177227277204
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1024 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1024 0x49BDBA3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x49CCCDF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x49CBF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x49CA6D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x49CA6D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x49B414C: outstring_func (vfprintf-internal.c:239)
+       n1: 1024 0x49B414C: __vfprintf_internal (vfprintf-internal.c:1263)
+        n1: 1024 0x499F79E: printf (printf.c:33)
+         n0: 1024 0x10A518: main (in /mnt/c/Users/butas/OneDrive/Documents/AN3/SCS/C measurements/measure)
+ n0: 0 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=48
+#-----------
+time=180867799025
+mem_heap_B=40001024
+mem_heap_extra_B=1488
+mem_stacks_B=0
+heap_tree=peak
+n2: 40001024 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 40000000 0x10976C: measureDynamicMemoryAccess (in /mnt/c/Users/butas/OneDrive/Documents/AN3/SCS/C measurements/measure)
+  n0: 40000000 0x10A28B: main (in /mnt/c/Users/butas/OneDrive/Documents/AN3/SCS/C measurements/measure)
+ n0: 1024 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=49
+#-----------
+time=184068194305
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=187268589585
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=190468984865
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=193669380145
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=196869775425
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=200070170705
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=203270565985
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=206470961265
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=209671356545
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1024 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1024 0x49BDBA3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x49CCCDF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x49CBF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x49CA6D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x49CA6D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x49B414C: outstring_func (vfprintf-internal.c:239)
+       n1: 1024 0x49B414C: __vfprintf_internal (vfprintf-internal.c:1263)
+        n1: 1024 0x499F79E: printf (printf.c:33)
+         n0: 1024 0x10A518: main (in /mnt/c/Users/butas/OneDrive/Documents/AN3/SCS/C measurements/measure)
+ n0: 0 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=58
+#-----------
+time=212871751825
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=216072147105
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=219272542385
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
