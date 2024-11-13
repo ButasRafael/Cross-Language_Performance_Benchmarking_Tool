@@ -1,0 +1,82 @@
+[
+{
+	"array_size":	1,
+	"number_of_tests":	100,
+	"passed_tests":	98,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Dynamic Memory Access",
+	"average_time":	18.23469387755102,
+	"std_deviation":	0.63569053580296031
+},
+{
+	"array_size":	10,
+	"number_of_tests":	100,
+	"passed_tests":	98,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Dynamic Memory Access",
+	"average_time":	31.795918367346939,
+	"std_deviation":	1.8403592355257947
+},
+{
+	"array_size":	100,
+	"number_of_tests":	100,
+	"passed_tests":	98,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Dynamic Memory Access",
+	"average_time":	168.59183673469389,
+	"std_deviation":	4.1938651372774229
+},
+{
+	"array_size":	1000,
+	"number_of_tests":	100,
+	"passed_tests":	100,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Dynamic Memory Access",
+	"average_time":	2119.46,
+	"std_deviation":	696.36423544004617
+},
+{
+	"array_size":	10000,
+	"number_of_tests":	100,
+	"passed_tests":	94,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Dynamic Memory Access",
+	"average_time":	15564.340425531915,
+	"std_deviation":	479.108004373897
+},
+{
+	"array_size":	100000,
+	"number_of_tests":	100,
+	"passed_tests":	98,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Dynamic Memory Access",
+	"average_time":	150852.27551020408,
+	"std_deviation":	3980.5039850645212
+},
+{
+	"array_size":	1000000,
+	"number_of_tests":	100,
+	"passed_tests":	98,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Dynamic Memory Access",
+	"average_time":	1538069.918367347,
+	"std_deviation":	60628.991330287114
+},
+{
+	"array_size":	10000000,
+	"number_of_tests":	100,
+	"passed_tests":	94,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Dynamic Memory Access",
+	"average_time":	15593526.446808511,
+	"std_deviation":	380384.58487605973
+}
+]

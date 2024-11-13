@@ -1,0 +1,82 @@
+[
+{
+	"array_size":	1,
+	"number_of_tests":	100,
+	"passed_tests":	98,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Static Memory Access",
+	"average_time":	17.581632653061224,
+	"std_deviation":	0.683978001015056
+},
+{
+	"array_size":	10,
+	"number_of_tests":	100,
+	"passed_tests":	99,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Static Memory Access",
+	"average_time":	30.838383838383837,
+	"std_deviation":	1.323502170033066
+},
+{
+	"array_size":	100,
+	"number_of_tests":	100,
+	"passed_tests":	98,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Static Memory Access",
+	"average_time":	170.09183673469389,
+	"std_deviation":	6.2939665548644754
+},
+{
+	"array_size":	1000,
+	"number_of_tests":	100,
+	"passed_tests":	100,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Static Memory Access",
+	"average_time":	2024.33,
+	"std_deviation":	665.44009580126738
+},
+{
+	"array_size":	10000,
+	"number_of_tests":	100,
+	"passed_tests":	100,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Static Memory Access",
+	"average_time":	14533.38,
+	"std_deviation":	1549.7074225801459
+},
+{
+	"array_size":	100000,
+	"number_of_tests":	100,
+	"passed_tests":	96,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Static Memory Access",
+	"average_time":	145745.02083333334,
+	"std_deviation":	5892.3802861887625
+},
+{
+	"array_size":	1000000,
+	"number_of_tests":	100,
+	"passed_tests":	98,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Static Memory Access",
+	"average_time":	1532776.8775510204,
+	"std_deviation":	58010.224015353837
+},
+{
+	"array_size":	10000000,
+	"number_of_tests":	100,
+	"passed_tests":	96,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Static Memory Access",
+	"average_time":	14955014.208333334,
+	"std_deviation":	497654.31657202489
+}
+]

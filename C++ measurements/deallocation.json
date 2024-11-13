@@ -1,0 +1,82 @@
+[
+    {
+        "array_size": 1,
+        "number_of_tests": 100,
+        "passed_tests": 98,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Deallocation",
+        "average_time": 21.714285714285715,
+        "std_deviation": 2.7847983842311335
+    },
+    {
+        "array_size": 10,
+        "number_of_tests": 100,
+        "passed_tests": 99,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Deallocation",
+        "average_time": 19.272727272727273,
+        "std_deviation": 0.5471354571293264
+    },
+    {
+        "array_size": 100,
+        "number_of_tests": 100,
+        "passed_tests": 97,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Deallocation",
+        "average_time": 25.47422680412371,
+        "std_deviation": 2.0209867116747873
+    },
+    {
+        "array_size": 1000,
+        "number_of_tests": 100,
+        "passed_tests": 92,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Deallocation",
+        "average_time": 27.467391304347824,
+        "std_deviation": 3.3861966832001484
+    },
+    {
+        "array_size": 10000,
+        "number_of_tests": 100,
+        "passed_tests": 93,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Deallocation",
+        "average_time": 20.161290322580644,
+        "std_deviation": 1.1386685544982462
+    },
+    {
+        "array_size": 100000,
+        "number_of_tests": 100,
+        "passed_tests": 99,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Deallocation",
+        "average_time": 31.32323232323232,
+        "std_deviation": 13.838774601870625
+    },
+    {
+        "array_size": 1000000,
+        "number_of_tests": 100,
+        "passed_tests": 95,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Deallocation",
+        "average_time": 44.43157894736842,
+        "std_deviation": 8.261072482405467
+    },
+    {
+        "array_size": 10000000,
+        "number_of_tests": 100,
+        "passed_tests": 99,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Deallocation",
+        "average_time": 2011.171717171717,
+        "std_deviation": 529.8055301770095
+    }
+]

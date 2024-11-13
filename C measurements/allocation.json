@@ -1,0 +1,82 @@
+[
+{
+	"array_size":	1,
+	"number_of_tests":	100,
+	"passed_tests":	99,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Memory Allocation",
+	"average_time":	17.888888888888889,
+	"std_deviation":	1.0139321285922909
+},
+{
+	"array_size":	10,
+	"number_of_tests":	100,
+	"passed_tests":	99,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Memory Allocation",
+	"average_time":	18,
+	"std_deviation":	0.72474307533947868
+},
+{
+	"array_size":	100,
+	"number_of_tests":	100,
+	"passed_tests":	99,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Memory Allocation",
+	"average_time":	21.777777777777779,
+	"std_deviation":	2.54873926273465
+},
+{
+	"array_size":	1000,
+	"number_of_tests":	100,
+	"passed_tests":	99,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Memory Allocation",
+	"average_time":	30.383838383838384,
+	"std_deviation":	10.347211668232827
+},
+{
+	"array_size":	10000,
+	"number_of_tests":	100,
+	"passed_tests":	96,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Memory Allocation",
+	"average_time":	22.9375,
+	"std_deviation":	5.344024115776425
+},
+{
+	"array_size":	100000,
+	"number_of_tests":	100,
+	"passed_tests":	99,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Memory Allocation",
+	"average_time":	30.151515151515152,
+	"std_deviation":	28.635417653126044
+},
+{
+	"array_size":	1000000,
+	"number_of_tests":	100,
+	"passed_tests":	99,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Memory Allocation",
+	"average_time":	129.85858585858585,
+	"std_deviation":	116.90227379397813
+},
+{
+	"array_size":	10000000,
+	"number_of_tests":	100,
+	"passed_tests":	97,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Memory Allocation",
+	"average_time":	7969.79381443299,
+	"std_deviation":	1691.0701908783096
+}
+]

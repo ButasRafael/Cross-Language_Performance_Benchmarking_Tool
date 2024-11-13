@@ -1,0 +1,82 @@
+[
+    {
+        "passed_tests": 97,
+        "programming_language": "Java",
+        "average_time": 269.8041237113402,
+        "std_deviation": 22.04336830177703,
+        "outlier_threshold": 2,
+        "array_size": 1,
+        "process_measured": "Static Memory Access",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 92,
+        "programming_language": "Java",
+        "average_time": 375.9130434782609,
+        "std_deviation": 102.1912797451653,
+        "outlier_threshold": 2,
+        "array_size": 10,
+        "process_measured": "Static Memory Access",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 95,
+        "programming_language": "Java",
+        "average_time": 167.16842105263157,
+        "std_deviation": 16.118412244895552,
+        "outlier_threshold": 2,
+        "array_size": 100,
+        "process_measured": "Static Memory Access",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 98,
+        "programming_language": "Java",
+        "average_time": 580.5,
+        "std_deviation": 820.9151345682849,
+        "outlier_threshold": 2,
+        "array_size": 1000,
+        "process_measured": "Static Memory Access",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 97,
+        "programming_language": "Java",
+        "average_time": 1985.1237113402062,
+        "std_deviation": 7.827071356501633,
+        "outlier_threshold": 2,
+        "array_size": 10000,
+        "process_measured": "Static Memory Access",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 95,
+        "programming_language": "Java",
+        "average_time": 19740.505263157895,
+        "std_deviation": 281.30937730863656,
+        "outlier_threshold": 2,
+        "array_size": 100000,
+        "process_measured": "Static Memory Access",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 99,
+        "programming_language": "Java",
+        "average_time": 212882.32323232322,
+        "std_deviation": 15241.503920352045,
+        "outlier_threshold": 2,
+        "array_size": 1000000,
+        "process_measured": "Static Memory Access",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 95,
+        "programming_language": "Java",
+        "average_time": 2172781.5368421054,
+        "std_deviation": 116507.88991912323,
+        "outlier_threshold": 2,
+        "array_size": 10000000,
+        "process_measured": "Static Memory Access",
+        "number_of_tests": 100
+    }
+]
