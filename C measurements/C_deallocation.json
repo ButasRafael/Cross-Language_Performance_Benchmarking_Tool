@@ -1,0 +1,82 @@
+[
+{
+	"array_size":	1,
+	"number_of_tests":	100,
+	"passed_tests":	99,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Memory Deallocation",
+	"average_time":	22.575757575757574,
+	"std_deviation":	2.0305291597273887
+},
+{
+	"array_size":	10,
+	"number_of_tests":	100,
+	"passed_tests":	96,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Memory Deallocation",
+	"average_time":	10.272916666666667,
+	"std_deviation":	2.5791018772153143
+},
+{
+	"array_size":	100,
+	"number_of_tests":	100,
+	"passed_tests":	91,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Memory Deallocation",
+	"average_time":	4.7745054945054939,
+	"std_deviation":	0.67373693587409855
+},
+{
+	"array_size":	1000,
+	"number_of_tests":	100,
+	"passed_tests":	98,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Memory Deallocation",
+	"average_time":	4.6783571428571422,
+	"std_deviation":	2.2151941189642677
+},
+{
+	"array_size":	10000,
+	"number_of_tests":	100,
+	"passed_tests":	98,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Memory Deallocation",
+	"average_time":	3.7946377551020416,
+	"std_deviation":	0.41139015235188031
+},
+{
+	"array_size":	100000,
+	"number_of_tests":	100,
+	"passed_tests":	95,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Memory Deallocation",
+	"average_time":	3.9481872631578945,
+	"std_deviation":	0.35785552063850723
+},
+{
+	"array_size":	1000000,
+	"number_of_tests":	100,
+	"passed_tests":	94,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Memory Deallocation",
+	"average_time":	6.5614285425531937,
+	"std_deviation":	0.22432541668364453
+},
+{
+	"array_size":	10000000,
+	"number_of_tests":	100,
+	"passed_tests":	96,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Memory Deallocation",
+	"average_time":	6.6334244760416672,
+	"std_deviation":	0.36933172960974281
+}
+]

@@ -1,0 +1,52 @@
+[
+    {
+        "passed_tests": 97,
+        "programming_language": "Java",
+        "average_time": 69875.5824742268,
+        "std_deviation": 26194.422250441698,
+        "outlier_threshold": 2,
+        "iterations": 2,
+        "process_measured": "Context Switch",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 99,
+        "programming_language": "Java",
+        "average_time": 18835.723232323235,
+        "std_deviation": 8521.510464366558,
+        "outlier_threshold": 2,
+        "iterations": 10,
+        "process_measured": "Context Switch",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 99,
+        "programming_language": "Java",
+        "average_time": 2589.931717171717,
+        "std_deviation": 2007.9583341838206,
+        "outlier_threshold": 2,
+        "iterations": 100,
+        "process_measured": "Context Switch",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 97,
+        "programming_language": "Java",
+        "average_time": 694.0382783505155,
+        "std_deviation": 65.11460228882457,
+        "outlier_threshold": 2,
+        "iterations": 1000,
+        "process_measured": "Context Switch",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 99,
+        "programming_language": "Java",
+        "average_time": 551.9475676767677,
+        "std_deviation": 56.456221831658375,
+        "outlier_threshold": 2,
+        "iterations": 10000,
+        "process_measured": "Context Switch",
+        "number_of_tests": 100
+    }
+]

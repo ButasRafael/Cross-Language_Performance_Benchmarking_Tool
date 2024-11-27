@@ -1,0 +1,82 @@
+[
+    {
+        "passed_tests": 99,
+        "programming_language": "Java",
+        "average_time": 8169583.252525252,
+        "std_deviation": 837509.4661279875,
+        "outlier_threshold": 2,
+        "array_size": 1,
+        "process_measured": "Memory Deallocation",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 93,
+        "programming_language": "Java",
+        "average_time": 900353.0451612903,
+        "std_deviation": 159346.67820415052,
+        "outlier_threshold": 2,
+        "array_size": 10,
+        "process_measured": "Memory Deallocation",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 94,
+        "programming_language": "Java",
+        "average_time": 81799.94234042554,
+        "std_deviation": 6350.756953848423,
+        "outlier_threshold": 2,
+        "array_size": 100,
+        "process_measured": "Memory Deallocation",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 94,
+        "programming_language": "Java",
+        "average_time": 8474.766872340426,
+        "std_deviation": 577.7360194103641,
+        "outlier_threshold": 2,
+        "array_size": 1000,
+        "process_measured": "Memory Deallocation",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 95,
+        "programming_language": "Java",
+        "average_time": 791.2537810526317,
+        "std_deviation": 49.48162017732134,
+        "outlier_threshold": 2,
+        "array_size": 10000,
+        "process_measured": "Memory Deallocation",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 95,
+        "programming_language": "Java",
+        "average_time": 80.90276242105263,
+        "std_deviation": 4.611647296810821,
+        "outlier_threshold": 2,
+        "array_size": 100000,
+        "process_measured": "Memory Deallocation",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 96,
+        "programming_language": "Java",
+        "average_time": 5.607164052083333,
+        "std_deviation": 0.4616241470466976,
+        "outlier_threshold": 2,
+        "array_size": 1000000,
+        "process_measured": "Memory Deallocation",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 95,
+        "programming_language": "Java",
+        "average_time": 1.4984568031578949,
+        "std_deviation": 0.20443849376238343,
+        "outlier_threshold": 2,
+        "array_size": 10000000,
+        "process_measured": "Memory Deallocation",
+        "number_of_tests": 100
+    }
+]

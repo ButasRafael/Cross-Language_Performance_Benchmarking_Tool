@@ -1,0 +1,82 @@
+[
+    {
+        "array_size": 1,
+        "number_of_tests": 100,
+        "passed_tests": 98,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Static Memory Access",
+        "average_time": 14.520408163265307,
+        "std_deviation": 0.5755138225389214
+    },
+    {
+        "array_size": 10,
+        "number_of_tests": 100,
+        "passed_tests": 98,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Static Memory Access",
+        "average_time": 2.472448979591838,
+        "std_deviation": 0.07529616658927868
+    },
+    {
+        "array_size": 100,
+        "number_of_tests": 100,
+        "passed_tests": 98,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Static Memory Access",
+        "average_time": 1.290714285714286,
+        "std_deviation": 0.13255918970599592
+    },
+    {
+        "array_size": 1000,
+        "number_of_tests": 100,
+        "passed_tests": 100,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Static Memory Access",
+        "average_time": 1.2585000000000006,
+        "std_deviation": 0.1251489113016969
+    },
+    {
+        "array_size": 10000,
+        "number_of_tests": 100,
+        "passed_tests": 98,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Static Memory Access",
+        "average_time": 1.2926734693877557,
+        "std_deviation": 0.13714085753826505
+    },
+    {
+        "array_size": 100000,
+        "number_of_tests": 100,
+        "passed_tests": 97,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Static Memory Access",
+        "average_time": 1.4137817525773202,
+        "std_deviation": 0.10153596520912718
+    },
+    {
+        "array_size": 1000000,
+        "number_of_tests": 100,
+        "passed_tests": 98,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Static Memory Access",
+        "average_time": 1.4179338571428575,
+        "std_deviation": 0.06584298297526953
+    },
+    {
+        "array_size": 10000000,
+        "number_of_tests": 100,
+        "passed_tests": 98,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Static Memory Access",
+        "average_time": 1.4504678244897955,
+        "std_deviation": 0.09297703529219531
+    }
+]

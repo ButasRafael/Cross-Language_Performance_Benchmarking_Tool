@@ -1,0 +1,82 @@
+[
+{
+	"array_size":	1,
+	"number_of_tests":	100,
+	"passed_tests":	98,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Static Memory Access",
+	"average_time":	16.23469387755102,
+	"std_deviation":	0.88986378696420176
+},
+{
+	"array_size":	10,
+	"number_of_tests":	100,
+	"passed_tests":	99,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Static Memory Access",
+	"average_time":	2.8161616161616161,
+	"std_deviation":	0.10982729390400593
+},
+{
+	"array_size":	100,
+	"number_of_tests":	100,
+	"passed_tests":	97,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Static Memory Access",
+	"average_time":	1.3805154639175263,
+	"std_deviation":	0.018013233052147075
+},
+{
+	"array_size":	1000,
+	"number_of_tests":	100,
+	"passed_tests":	100,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Static Memory Access",
+	"average_time":	1.96002,
+	"std_deviation":	0.19561646045259076
+},
+{
+	"array_size":	10000,
+	"number_of_tests":	100,
+	"passed_tests":	100,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Static Memory Access",
+	"average_time":	1.504618,
+	"std_deviation":	0.1366478886627964
+},
+{
+	"array_size":	100000,
+	"number_of_tests":	100,
+	"passed_tests":	97,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Static Memory Access",
+	"average_time":	1.5808369072164949,
+	"std_deviation":	0.027843021386322747
+},
+{
+	"array_size":	1000000,
+	"number_of_tests":	100,
+	"passed_tests":	96,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Static Memory Access",
+	"average_time":	1.5433051354166665,
+	"std_deviation":	0.061006092127586536
+},
+{
+	"array_size":	10000000,
+	"number_of_tests":	100,
+	"passed_tests":	97,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Static Memory Access",
+	"average_time":	1.6729381020618561,
+	"std_deviation":	0.0364941040512223
+}
+]

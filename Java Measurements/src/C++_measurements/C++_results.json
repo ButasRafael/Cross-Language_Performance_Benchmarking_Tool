@@ -1,0 +1,472 @@
+[
+    {
+        "array_size": 1,
+        "number_of_tests": 100,
+        "passed_tests": 98,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Static Memory Access",
+        "average_time": 14.520408163265307,
+        "std_deviation": 0.5755138225389214
+    },
+    {
+        "array_size": 10,
+        "number_of_tests": 100,
+        "passed_tests": 98,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Static Memory Access",
+        "average_time": 2.472448979591838,
+        "std_deviation": 0.07529616658927868
+    },
+    {
+        "array_size": 100,
+        "number_of_tests": 100,
+        "passed_tests": 98,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Static Memory Access",
+        "average_time": 1.290714285714286,
+        "std_deviation": 0.13255918970599592
+    },
+    {
+        "array_size": 1000,
+        "number_of_tests": 100,
+        "passed_tests": 100,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Static Memory Access",
+        "average_time": 1.2585000000000006,
+        "std_deviation": 0.1251489113016969
+    },
+    {
+        "array_size": 10000,
+        "number_of_tests": 100,
+        "passed_tests": 98,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Static Memory Access",
+        "average_time": 1.2926734693877557,
+        "std_deviation": 0.13714085753826505
+    },
+    {
+        "array_size": 100000,
+        "number_of_tests": 100,
+        "passed_tests": 97,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Static Memory Access",
+        "average_time": 1.4137817525773202,
+        "std_deviation": 0.10153596520912718
+    },
+    {
+        "array_size": 1000000,
+        "number_of_tests": 100,
+        "passed_tests": 98,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Static Memory Access",
+        "average_time": 1.4179338571428575,
+        "std_deviation": 0.06584298297526953
+    },
+    {
+        "array_size": 10000000,
+        "number_of_tests": 100,
+        "passed_tests": 98,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Static Memory Access",
+        "average_time": 1.4504678244897955,
+        "std_deviation": 0.09297703529219531
+    },
+    {
+        "array_size": 1,
+        "number_of_tests": 100,
+        "passed_tests": 95,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Dynamic Memory Access",
+        "average_time": 33.97894736842105,
+        "std_deviation": 18.804243052744866
+    },
+    {
+        "array_size": 10,
+        "number_of_tests": 100,
+        "passed_tests": 99,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Dynamic Memory Access",
+        "average_time": 3.89090909090909,
+        "std_deviation": 0.8701666981932992
+    },
+    {
+        "array_size": 100,
+        "number_of_tests": 100,
+        "passed_tests": 95,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Dynamic Memory Access",
+        "average_time": 1.2315789473684209,
+        "std_deviation": 0.020329692542976813
+    },
+    {
+        "array_size": 1000,
+        "number_of_tests": 100,
+        "passed_tests": 83,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Dynamic Memory Access",
+        "average_time": 3.410036144578314,
+        "std_deviation": 0.05923293730893447
+    },
+    {
+        "array_size": 10000,
+        "number_of_tests": 100,
+        "passed_tests": 96,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Dynamic Memory Access",
+        "average_time": 1.438930208333334,
+        "std_deviation": 0.030611878548856327
+    },
+    {
+        "array_size": 100000,
+        "number_of_tests": 100,
+        "passed_tests": 95,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Dynamic Memory Access",
+        "average_time": 1.4217017894736848,
+        "std_deviation": 0.15991237021357696
+    },
+    {
+        "array_size": 1000000,
+        "number_of_tests": 100,
+        "passed_tests": 95,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Dynamic Memory Access",
+        "average_time": 1.4077488631578947,
+        "std_deviation": 0.05513979116822997
+    },
+    {
+        "array_size": 10000000,
+        "number_of_tests": 100,
+        "passed_tests": 94,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Dynamic Memory Access",
+        "average_time": 1.4666114010638298,
+        "std_deviation": 0.08395385355215507
+    },
+    {
+        "array_size": 1,
+        "number_of_tests": 100,
+        "passed_tests": 99,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Allocation",
+        "average_time": 18.161616161616163,
+        "std_deviation": 1.6919719575670726
+    },
+    {
+        "array_size": 10,
+        "number_of_tests": 100,
+        "passed_tests": 98,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Allocation",
+        "average_time": 30.840816326530618,
+        "std_deviation": 1.5527353569469056
+    },
+    {
+        "array_size": 100,
+        "number_of_tests": 100,
+        "passed_tests": 99,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Allocation",
+        "average_time": 59.94686868686868,
+        "std_deviation": 10.633885674498876
+    },
+    {
+        "array_size": 1000,
+        "number_of_tests": 100,
+        "passed_tests": 98,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Allocation",
+        "average_time": 24.831561224489803,
+        "std_deviation": 10.129666288866705
+    },
+    {
+        "array_size": 10000,
+        "number_of_tests": 100,
+        "passed_tests": 95,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Allocation",
+        "average_time": 14.259864210526318,
+        "std_deviation": 0.8952496253960373
+    },
+    {
+        "array_size": 100000,
+        "number_of_tests": 100,
+        "passed_tests": 96,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Allocation",
+        "average_time": 14.018417083333334,
+        "std_deviation": 0.8208457935301103
+    },
+    {
+        "array_size": 1000000,
+        "number_of_tests": 100,
+        "passed_tests": 95,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Allocation",
+        "average_time": 19.80006269473684,
+        "std_deviation": 1.2478479571097647
+    },
+    {
+        "array_size": 10000000,
+        "number_of_tests": 100,
+        "passed_tests": 97,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Allocation",
+        "average_time": 14.867260175257734,
+        "std_deviation": 0.4341669057399364
+    },
+    {
+        "array_size": 1,
+        "number_of_tests": 100,
+        "passed_tests": 99,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Deallocation",
+        "average_time": 18.666666666666668,
+        "std_deviation": 1.0050378152592119
+    },
+    {
+        "array_size": 10,
+        "number_of_tests": 100,
+        "passed_tests": 97,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Deallocation",
+        "average_time": 7.634020618556706,
+        "std_deviation": 0.235895572710383
+    },
+    {
+        "array_size": 100,
+        "number_of_tests": 100,
+        "passed_tests": 98,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Deallocation",
+        "average_time": 17.711530612244903,
+        "std_deviation": 0.09267401767856168
+    },
+    {
+        "array_size": 1000,
+        "number_of_tests": 100,
+        "passed_tests": 95,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Deallocation",
+        "average_time": 7.160989473684208,
+        "std_deviation": 0.05425233339378463
+    },
+    {
+        "array_size": 10000,
+        "number_of_tests": 100,
+        "passed_tests": 95,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Deallocation",
+        "average_time": 7.610917894736843,
+        "std_deviation": 0.9713950354736925
+    },
+    {
+        "array_size": 100000,
+        "number_of_tests": 100,
+        "passed_tests": 95,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Deallocation",
+        "average_time": 7.052892947368418,
+        "std_deviation": 0.4971958444630376
+    },
+    {
+        "array_size": 1000000,
+        "number_of_tests": 100,
+        "passed_tests": 91,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Deallocation",
+        "average_time": 7.948238186813185,
+        "std_deviation": 0.6348760421332745
+    },
+    {
+        "array_size": 10000000,
+        "number_of_tests": 100,
+        "passed_tests": 96,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Deallocation",
+        "average_time": 8.138053765624996,
+        "std_deviation": 0.31294873536540985
+    },
+    {
+        "iterations": 2,
+        "number_of_tests": 100,
+        "passed_tests": 99,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Thread Creation",
+        "average_time": 4934.469696969697,
+        "std_deviation": 645.1909701558254
+    },
+    {
+        "iterations": 10,
+        "number_of_tests": 100,
+        "passed_tests": 98,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Thread Creation",
+        "average_time": 4629.9102040816315,
+        "std_deviation": 195.6923337479357
+    },
+    {
+        "iterations": 100,
+        "number_of_tests": 100,
+        "passed_tests": 99,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Thread Creation",
+        "average_time": 5366.407979797978,
+        "std_deviation": 1359.293684661102
+    },
+    {
+        "iterations": 1000,
+        "number_of_tests": 100,
+        "passed_tests": 96,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Thread Creation",
+        "average_time": 5585.209291666666,
+        "std_deviation": 1129.3565938773493
+    },
+    {
+        "iterations": 10000,
+        "number_of_tests": 100,
+        "passed_tests": 98,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Thread Creation",
+        "average_time": 6228.788142857143,
+        "std_deviation": 339.48252297925376
+    },
+    {
+        "iterations": 2,
+        "number_of_tests": 100,
+        "passed_tests": 99,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Context Switch",
+        "average_time": 4685.121212121212,
+        "std_deviation": 454.8243144608621
+    },
+    {
+        "iterations": 10,
+        "number_of_tests": 100,
+        "passed_tests": 99,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Context Switch",
+        "average_time": 1524.0090909090904,
+        "std_deviation": 499.8574277723334
+    },
+    {
+        "iterations": 100,
+        "number_of_tests": 100,
+        "passed_tests": 97,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Context Switch",
+        "average_time": 712.9486597938146,
+        "std_deviation": 20.4679585467097
+    },
+    {
+        "iterations": 1000,
+        "number_of_tests": 100,
+        "passed_tests": 93,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Context Switch",
+        "average_time": 656.5207419354838,
+        "std_deviation": 59.46727873845463
+    },
+    {
+        "iterations": 10000,
+        "number_of_tests": 100,
+        "passed_tests": 94,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Context Switch",
+        "average_time": 643.8444436170212,
+        "std_deviation": 34.33270013207295
+    },
+    {
+        "iterations": 2,
+        "number_of_tests": 100,
+        "passed_tests": 99,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Thread Migration",
+        "average_time": 244.28787878787878,
+        "std_deviation": 7.5311108645401355
+    },
+    {
+        "iterations": 10,
+        "number_of_tests": 100,
+        "passed_tests": 99,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Thread Migration",
+        "average_time": 295.28080808080796,
+        "std_deviation": 3.970285509100456
+    },
+    {
+        "iterations": 100,
+        "number_of_tests": 100,
+        "passed_tests": 98,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Thread Migration",
+        "average_time": 368.8648979591837,
+        "std_deviation": 206.9009990025541
+    },
+    {
+        "iterations": 1000,
+        "number_of_tests": 100,
+        "passed_tests": 98,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Thread Migration",
+        "average_time": 8436.182979591838,
+        "std_deviation": 4093.0099056811246
+    },
+    {
+        "iterations": 10000,
+        "number_of_tests": 100,
+        "passed_tests": 99,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Thread Migration",
+        "average_time": 11263.995887878786,
+        "std_deviation": 2605.1790444349
+    }
+]

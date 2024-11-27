@@ -1,0 +1,82 @@
+[
+    {
+        "array_size": 1,
+        "number_of_tests": 100,
+        "passed_tests": 98,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Dynamic Memory Access",
+        "average_time": 16.79591836734694,
+        "std_deviation": 0.5706992430248807
+    },
+    {
+        "array_size": 10,
+        "number_of_tests": 100,
+        "passed_tests": 99,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Dynamic Memory Access",
+        "average_time": 2.920202020202022,
+        "std_deviation": 0.10048347568037089
+    },
+    {
+        "array_size": 100,
+        "number_of_tests": 100,
+        "passed_tests": 97,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Dynamic Memory Access",
+        "average_time": 3.702886597938145,
+        "std_deviation": 0.144742635180314
+    },
+    {
+        "array_size": 1000,
+        "number_of_tests": 100,
+        "passed_tests": 89,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Dynamic Memory Access",
+        "average_time": 1.386404494382023,
+        "std_deviation": 0.034261623665626594
+    },
+    {
+        "array_size": 10000,
+        "number_of_tests": 100,
+        "passed_tests": 96,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Dynamic Memory Access",
+        "average_time": 1.4230947916666663,
+        "std_deviation": 0.032363297015393803
+    },
+    {
+        "array_size": 100000,
+        "number_of_tests": 100,
+        "passed_tests": 94,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Dynamic Memory Access",
+        "average_time": 1.4343693617021276,
+        "std_deviation": 0.019832474969664355
+    },
+    {
+        "array_size": 1000000,
+        "number_of_tests": 100,
+        "passed_tests": 98,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Dynamic Memory Access",
+        "average_time": 1.4704394591836736,
+        "std_deviation": 0.04635548109043724
+    },
+    {
+        "array_size": 10000000,
+        "number_of_tests": 100,
+        "passed_tests": 92,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Dynamic Memory Access",
+        "average_time": 1.4836097195652176,
+        "std_deviation": 0.03317083126598691
+    }
+]

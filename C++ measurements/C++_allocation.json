@@ -1,0 +1,82 @@
+[
+    {
+        "array_size": 1,
+        "number_of_tests": 100,
+        "passed_tests": 96,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Allocation",
+        "average_time": 25.5625,
+        "std_deviation": 18.719871627497877
+    },
+    {
+        "array_size": 10,
+        "number_of_tests": 100,
+        "passed_tests": 98,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Allocation",
+        "average_time": 8.755102040816329,
+        "std_deviation": 1.389179940812211
+    },
+    {
+        "array_size": 100,
+        "number_of_tests": 100,
+        "passed_tests": 99,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Allocation",
+        "average_time": 7.694343434343433,
+        "std_deviation": 0.2676276684529059
+    },
+    {
+        "array_size": 1000,
+        "number_of_tests": 100,
+        "passed_tests": 97,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Allocation",
+        "average_time": 9.036876288659796,
+        "std_deviation": 0.7041310834167517
+    },
+    {
+        "array_size": 10000,
+        "number_of_tests": 100,
+        "passed_tests": 99,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Allocation",
+        "average_time": 9.320542424242422,
+        "std_deviation": 0.8959764965905122
+    },
+    {
+        "array_size": 100000,
+        "number_of_tests": 100,
+        "passed_tests": 96,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Allocation",
+        "average_time": 9.058121979166666,
+        "std_deviation": 0.9902293526287438
+    },
+    {
+        "array_size": 1000000,
+        "number_of_tests": 100,
+        "passed_tests": 95,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Allocation",
+        "average_time": 15.14648608421054,
+        "std_deviation": 0.6520885693448102
+    },
+    {
+        "array_size": 10000000,
+        "number_of_tests": 100,
+        "passed_tests": 99,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Memory Allocation",
+        "average_time": 13.009467818181818,
+        "std_deviation": 2.512887852768756
+    }
+]

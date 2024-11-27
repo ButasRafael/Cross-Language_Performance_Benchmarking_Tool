@@ -12,14 +12,13 @@
 #include <pthread.h>
 #include <nlohmann/json.hpp>
 #include <fstream>
-
+#include <filesystem>
+#include "JNInterface.h"
 using ordered_json = nlohmann::ordered_json;
 
 const int NUM_TESTS = 100;
 const std::vector<int> ARRAY_SIZES = {1, 10, 100, 1000, 10000, 100000, 1000000, 10000000};
-const int CREATION_ITERATIONS = 10000;
-const int CONTEXT_SWITCH_ITERATIONS = 10000;
-const int MIGRATION_ITERATIONS = 10000;
+const std::vector<int> ITERATIONS = {2, 10, 100, 1000, 10000};
 
 double calculateAverage(const std::vector<double> &times)
 {
@@ -154,10 +153,10 @@ void CreateThreadFunction()
     }
 }
 
-double measureThreadCreationTime()
+double measureThreadCreationTime(int iterations)
 {
     auto start = std::chrono::high_resolution_clock::now();
-    for (int i = 0; i < CREATION_ITERATIONS; ++i)
+    for (int i = 0; i < iterations; ++i)
     {
         std::thread t(CreateThreadFunction);
         t.join();
@@ -165,10 +164,10 @@ double measureThreadCreationTime()
     auto end = std::chrono::high_resolution_clock::now();
 
     double time = std::chrono::duration<double, std::nano>(end - start).count();
-    return time / CREATION_ITERATIONS;
+    return time / iterations;
 }
 
-double measureContextSwitchTime()
+double measureContextSwitchTime(int iterations)
 {
     std::mutex mtx;
     std::condition_variable cv;
@@ -176,7 +175,7 @@ double measureContextSwitchTime()
 
     auto threadFunc = [&](bool myTurn)
     {
-        for (int i = 0; i < CONTEXT_SWITCH_ITERATIONS / 2; ++i)
+        for (int i = 0; i < iterations / 2; ++i)
         {
             std::unique_lock<std::mutex> lock(mtx);
             cv.wait(lock, [&]
@@ -197,10 +196,10 @@ double measureContextSwitchTime()
 
     auto end = std::chrono::high_resolution_clock::now();
     double time = std::chrono::duration<double, std::nano>(end - start).count();
-    return time / CONTEXT_SWITCH_ITERATIONS;
+    return time / iterations;
 }
 
-double measureThreadMigrationTime()
+double measureThreadMigrationTime(int iterations)
 {
     cpu_set_t cpuset;
     CPU_ZERO(&cpuset);
@@ -221,10 +220,11 @@ double measureThreadMigrationTime()
     if (rc != 0)
     {
         perror("Error setting thread affinity");
+        //exit(EXIT_FAILURE);
     }
 
     auto start = std::chrono::high_resolution_clock::now();
-    for (int i = 0; i < MIGRATION_ITERATIONS; ++i)
+    for (int i = 0; i < iterations; ++i)
     {
         CPU_ZERO(&cpuset);
         CPU_SET(i % 2, &cpuset);
@@ -232,6 +232,7 @@ double measureThreadMigrationTime()
         if (rc != 0)
         {
             perror("Error setting thread affinity in iteration");
+            //exit(EXIT_FAILURE);
         }
     }
     auto end = std::chrono::high_resolution_clock::now();
@@ -239,13 +240,26 @@ double measureThreadMigrationTime()
     t.join();
 
     double time = std::chrono::duration<double, std::nano>(end - start).count();
-    return time / MIGRATION_ITERATIONS;
+    return time / iterations;
 }
 
-void saveResultsToJSON(const std::string &filename, double average, double stdDev, const std::string &process, int numTests, int passedTests, const std::string &language, int arraySize, double threshold)
+void ensureDirectoryExists(const std::string &folderName)
 {
+    if (!std::filesystem::exists(folderName))
+    {
+        std::filesystem::create_directory(folderName);
+    }
+}
+
+void saveResultsToJSON(const std::string &filename, double average, double stdDev, const std::string &process, int numTests, int passedTests, const std::string &language, int arraySize, double threshold, int iterations)
+{
+    const std::string folderName = "C++_measurements";
+    ensureDirectoryExists(folderName);
+
+    std::string fullPath = folderName + "/" + filename;
+
     ordered_json json;
-    std::ifstream file_in(filename);
+    std::ifstream file_in(fullPath);
     if (file_in.is_open())
     {
         file_in >> json;
@@ -259,6 +273,8 @@ void saveResultsToJSON(const std::string &filename, double average, double stdDe
     ordered_json result;
     if (arraySize > 0)
         result["array_size"] = arraySize;
+    if (iterations > 0)
+        result["iterations"] = iterations;
     result["number_of_tests"] = numTests;
     result["passed_tests"] = passedTests;
     result["outlier_threshold"] = threshold;
@@ -269,7 +285,7 @@ void saveResultsToJSON(const std::string &filename, double average, double stdDe
 
     json.push_back(result);
 
-    std::ofstream file_out(filename);
+    std::ofstream file_out(fullPath);
     file_out << json.dump(4);
     file_out.flush();
     file_out.close();
@@ -277,11 +293,14 @@ void saveResultsToJSON(const std::string &filename, double average, double stdDe
 
 void combineJSONFiles(const std::vector<std::string> &filenames, const std::string &outputFilename)
 {
+    const std::string folderName = "C++_measurements";
+    ensureDirectoryExists(folderName);
+
     ordered_json combinedResults = ordered_json::array();
 
     for (const auto &filename : filenames)
     {
-        std::ifstream inputFile(filename);
+        std::ifstream inputFile(folderName + "/" + filename);
         if (inputFile.is_open())
         {
             ordered_json fileContent;
@@ -299,7 +318,9 @@ void combineJSONFiles(const std::vector<std::string> &filenames, const std::stri
         }
     }
 
-    std::ofstream outputFile(outputFilename);
+    std::string fullPath = folderName + "/" + outputFilename;
+
+    std::ofstream outputFile(fullPath);
     if (outputFile.is_open())
     {
         outputFile << combinedResults.dump(4);
@@ -316,7 +337,7 @@ void StaticAccessMain(int numTests, double threshold)
     const char language[] = "C++";
     std::cout << std::fixed << std::setprecision(6);
 
-    std::ofstream("C++_static_access.json") << "[]";
+    std::ofstream("C++_measurements/C++_static_access.json") << "[]";
 
     for (int size : ARRAY_SIZES)
     {
@@ -333,7 +354,7 @@ void StaticAccessMain(int numTests, double threshold)
         {
             double staticAverage = calculateAverage(staticAccessTimes);
             double staticStdDev = calculateStandardDeviation(staticAccessTimes, staticAverage);
-            saveResultsToJSON("C++_static_access.json", staticAverage, staticStdDev, "Static Memory Access", numTests, staticAccessTimes.size(), language, size, threshold);
+            saveResultsToJSON("C++_static_access.json", staticAverage, staticStdDev, "Static Memory Access", numTests, staticAccessTimes.size(), language, size, threshold, 0);
         }
         else
         {
@@ -347,7 +368,7 @@ void DynamicAccessMain(int numTests, double threshold)
     const char language[] = "C++";
     std::cout << std::fixed << std::setprecision(6);
 
-    std::ofstream("C++_dynamic_access.json") << "[]";
+    std::ofstream("C++_measurements/C++_dynamic_access.json") << "[]";
 
     for (int size : ARRAY_SIZES)
     {
@@ -364,7 +385,7 @@ void DynamicAccessMain(int numTests, double threshold)
         {
             double dynamicAverage = calculateAverage(dynamicAccessTimes);
             double dynamicStdDev = calculateStandardDeviation(dynamicAccessTimes, dynamicAverage);
-            saveResultsToJSON("C++_dynamic_access.json", dynamicAverage, dynamicStdDev, "Dynamic Memory Access", numTests, dynamicAccessTimes.size(), language, size, threshold);
+            saveResultsToJSON("C++_dynamic_access.json", dynamicAverage, dynamicStdDev, "Dynamic Memory Access", numTests, dynamicAccessTimes.size(), language, size, threshold, 0);
         }
         else
         {
@@ -378,7 +399,7 @@ void AllocationMain(int numTests, double threshold)
     const char language[] = "C++";
     std::cout << std::fixed << std::setprecision(6);
 
-    std::ofstream("C++_allocation.json") << "[]";
+    std::ofstream("C++_measurements/C++_allocation.json") << "[]";
 
     for (int size : ARRAY_SIZES)
     {
@@ -395,7 +416,7 @@ void AllocationMain(int numTests, double threshold)
         {
             double allocAverage = calculateAverage(allocTimes);
             double allocStdDev = calculateStandardDeviation(allocTimes, allocAverage);
-            saveResultsToJSON("C++_allocation.json", allocAverage, allocStdDev, "Memory Allocation", numTests, allocTimes.size(), language, size, threshold);
+            saveResultsToJSON("C++_allocation.json", allocAverage, allocStdDev, "Memory Allocation", numTests, allocTimes.size(), language, size, threshold, 0);
         }
         else
         {
@@ -409,7 +430,7 @@ void DeallocationMain(int numTests, double threshold)
     const char language[] = "C++";
     std::cout << std::fixed << std::setprecision(6);
 
-    std::ofstream("C++_deallocation.json") << "[]";
+    std::ofstream("C++_measurements/C++_deallocation.json") << "[]";
 
     for (int size : ARRAY_SIZES)
     {
@@ -426,7 +447,7 @@ void DeallocationMain(int numTests, double threshold)
         {
             double deallocAverage = calculateAverage(deallocTimes);
             double deallocStdDev = calculateStandardDeviation(deallocTimes, deallocAverage);
-            saveResultsToJSON("C++_deallocation.json", deallocAverage, deallocStdDev, "Memory Deallocation", numTests, deallocTimes.size(), language, size, threshold);
+            saveResultsToJSON("C++_deallocation.json", deallocAverage, deallocStdDev, "Memory Deallocation", numTests, deallocTimes.size(), language, size, threshold, 0);
         }
         else
         {
@@ -440,26 +461,28 @@ void ThreadCreationMain(int numTests, double threshold)
     const char language[] = "C++";
     std::cout << std::fixed << std::setprecision(6);
 
-    std::ofstream("C++_thread_creation.json") << "[]";
+    std::ofstream("C++_measurements/C++_thread_creation.json") << "[]";
 
-    std::vector<double> threadCreationTimes;
-
-    for (int i = 0; i < NUM_TESTS; ++i)
+    for (int iterations : ITERATIONS)
     {
-        threadCreationTimes.push_back(measureThreadCreationTime());
-    }
+        std::vector<double> threadCreationTimes;
+        for (int i = 0; i < NUM_TESTS; ++i)
+        {
+            threadCreationTimes.push_back(measureThreadCreationTime(iterations));
+        }
 
-    removeOutliers(threadCreationTimes, threshold);
+        removeOutliers(threadCreationTimes, threshold);
 
-    if (!threadCreationTimes.empty())
-    {
-        double threadCreationAverage = calculateAverage(threadCreationTimes);
-        double threadCreationStdDev = calculateStandardDeviation(threadCreationTimes, threadCreationAverage);
-        saveResultsToJSON("C++_thread_creation.json", threadCreationAverage, threadCreationStdDev, "Thread Creation", numTests, threadCreationTimes.size(), language, 0, threshold);
-    }
-    else
-    {
-        std::cout << "All thread creation times were outliers.\n";
+        if (!threadCreationTimes.empty())
+        {
+            double threadCreationAverage = calculateAverage(threadCreationTimes);
+            double threadCreationStdDev = calculateStandardDeviation(threadCreationTimes, threadCreationAverage);
+            saveResultsToJSON("C++_thread_creation.json", threadCreationAverage, threadCreationStdDev, "Thread Creation", numTests, threadCreationTimes.size(), language, 0, threshold, iterations);
+        }
+        else
+        {
+            std::cout << "All thread creation times were outliers.\n";
+        }
     }
 }
 
@@ -468,26 +491,28 @@ void ContextSwitchMain(int numTests, double threshold)
     const char language[] = "C++";
     std::cout << std::fixed << std::setprecision(6);
 
-    std::ofstream("C++_context_switch.json") << "[]";
+    std::ofstream("C++_measurements/C++_context_switch.json") << "[]";
 
-    std::vector<double> contextSwitchTimes;
-
-    for (int i = 0; i < NUM_TESTS; ++i)
+    for (int iterations : ITERATIONS)
     {
-        contextSwitchTimes.push_back(measureContextSwitchTime());
-    }
+        std::vector<double> contextSwitchTimes;
+        for (int i = 0; i < NUM_TESTS; ++i)
+        {
+            contextSwitchTimes.push_back(measureContextSwitchTime(iterations));
+        }
 
-    removeOutliers(contextSwitchTimes, threshold);
+        removeOutliers(contextSwitchTimes, threshold);
 
-    if (!contextSwitchTimes.empty())
-    {
-        double contextSwitchAverage = calculateAverage(contextSwitchTimes);
-        double contextSwitchStdDev = calculateStandardDeviation(contextSwitchTimes, contextSwitchAverage);
-        saveResultsToJSON("C++_context_switch.json", contextSwitchAverage, contextSwitchStdDev, "Context Switch", numTests, contextSwitchTimes.size(), language, 0, threshold);
-    }
-    else
-    {
-        std::cout << "All context switch times were outliers.\n";
+        if (!contextSwitchTimes.empty())
+        {
+            double contextSwitchAverage = calculateAverage(contextSwitchTimes);
+            double contextSwitchStdDev = calculateStandardDeviation(contextSwitchTimes, contextSwitchAverage);
+            saveResultsToJSON("C++_context_switch.json", contextSwitchAverage, contextSwitchStdDev, "Context Switch", numTests, contextSwitchTimes.size(), language, 0, threshold, iterations);
+        }
+        else
+        {
+            std::cout << "All context switch times were outliers.\n";
+        }
     }
 }
 
@@ -496,39 +521,33 @@ void ThreadMigrationMain(int numTests, double threshold)
     const char language[] = "C++";
     std::cout << std::fixed << std::setprecision(6);
 
-    std::ofstream("C++_thread_migration.json") << "[]";
+    std::ofstream("C++_measurements/C++_thread_migration.json") << "[]";
 
-    std::vector<double> threadMigrationTimes;
-
-    for (int i = 0; i < NUM_TESTS; ++i)
+    for (int iterations : ITERATIONS)
     {
-        threadMigrationTimes.push_back(measureThreadMigrationTime());
-    }
+        std::vector<double> threadMigrationTimes;
+        for (int i = 0; i < NUM_TESTS; ++i)
+        {
+            threadMigrationTimes.push_back(measureThreadMigrationTime(iterations));
+        }
 
-    removeOutliers(threadMigrationTimes, threshold);
+        removeOutliers(threadMigrationTimes, threshold);
 
-    if (!threadMigrationTimes.empty())
-    {
-        double threadMigrationAverage = calculateAverage(threadMigrationTimes);
-        double threadMigrationStdDev = calculateStandardDeviation(threadMigrationTimes, threadMigrationAverage);
-        saveResultsToJSON("C++_thread_migration.json", threadMigrationAverage, threadMigrationStdDev, "Thread Migration", numTests, threadMigrationTimes.size(), language, 0, threshold);
-    }
-    else
-    {
-        std::cout << "All thread migration times were outliers.\n";
+        if (!threadMigrationTimes.empty())
+        {
+            double threadMigrationAverage = calculateAverage(threadMigrationTimes);
+            double threadMigrationStdDev = calculateStandardDeviation(threadMigrationTimes, threadMigrationAverage);
+            saveResultsToJSON("C++_thread_migration.json", threadMigrationAverage, threadMigrationStdDev, "Thread Migration", numTests, threadMigrationTimes.size(), language, 0, threshold, iterations);
+        }
+        else
+        {
+            std::cout << "All thread migration times were outliers.\n";
+        }
     }
 }
 
-int main(int argc, char *argv[])
+void callAll_Cpp_Benchmarks(int numTests, double threshold)
 {
-    if (argc < 3)
-    {
-        std::cerr << "Usage: " << argv[0] << " <number_of_tests> <outlier_threshold>\n";
-        return 1;
-    }
-
-    int numTests = std::stoi(argv[1]);
-    double threshold = std::stod(argv[2]);
 
     StaticAccessMain(numTests, threshold);
     DynamicAccessMain(numTests, threshold);
@@ -539,6 +558,38 @@ int main(int argc, char *argv[])
     ThreadMigrationMain(numTests, threshold);
 
     combineJSONFiles({"C++_static_access.json", "C++_dynamic_access.json", "C++_allocation.json", "C++_deallocation.json", "C++_thread_creation.json", "C++_context_switch.json", "C++_thread_migration.json"}, "C++_results.json");
+}
 
-    return 0;
+JNIEXPORT void JNICALL Java_JNInterface_callNative_1Cpp_1Benchmark(JNIEnv *env, jobject obj, jint benchmarkType, jint numTests, jdouble threshold)
+{
+    switch (benchmarkType)
+    {
+    case 0:
+        callAll_Cpp_Benchmarks(numTests, threshold);
+        break;
+    case 1:
+        StaticAccessMain(numTests, threshold);
+        break;
+    case 2:
+        DynamicAccessMain(numTests, threshold);
+        break;
+    case 3:
+        AllocationMain(numTests, threshold);
+        break;
+    case 4:
+        DeallocationMain(numTests, threshold);
+        break;
+    case 5:
+        ThreadCreationMain(numTests, threshold);
+        break;
+    case 6:
+        ContextSwitchMain(numTests, threshold);
+        break;
+    case 7:
+        ThreadMigrationMain(numTests, threshold);
+        break;
+    default:
+        std::cerr << "Invalid benchmark type" << std::endl;
+        break;
+    }
 }

@@ -1,9 +1,0 @@
-[{
-    "passed_tests": 95,
-    "programming_language": "Java",
-    "average_time": 69933.07368421053,
-    "std_deviation": 47814.38526487325,
-    "outlier_threshold": 2,
-    "process_measured": "Thread Creation",
-    "number_of_tests": 100
-}]

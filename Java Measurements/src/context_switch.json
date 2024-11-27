@@ -1,9 +1,0 @@
-[{
-    "passed_tests": 83,
-    "programming_language": "Java",
-    "average_time": 785.9435831325301,
-    "std_deviation": 1368.5268593195813,
-    "outlier_threshold": 2,
-    "process_measured": "Context Switch",
-    "number_of_tests": 100
-}]

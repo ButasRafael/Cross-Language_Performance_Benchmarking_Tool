@@ -1,0 +1,82 @@
+[
+    {
+        "passed_tests": 99,
+        "programming_language": "Java",
+        "average_time": 108.81818181818181,
+        "std_deviation": 12.802590991207767,
+        "outlier_threshold": 2,
+        "array_size": 1,
+        "process_measured": "Memory Allocation",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 99,
+        "programming_language": "Java",
+        "average_time": 38.45151515151515,
+        "std_deviation": 23.485225803420526,
+        "outlier_threshold": 2,
+        "array_size": 10,
+        "process_measured": "Memory Allocation",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 97,
+        "programming_language": "Java",
+        "average_time": 3.2942268041237117,
+        "std_deviation": 0.3122311959012265,
+        "outlier_threshold": 2,
+        "array_size": 100,
+        "process_measured": "Memory Allocation",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 99,
+        "programming_language": "Java",
+        "average_time": 3.811828282828283,
+        "std_deviation": 2.597785412870219,
+        "outlier_threshold": 2,
+        "array_size": 1000,
+        "process_measured": "Memory Allocation",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 92,
+        "programming_language": "Java",
+        "average_time": 5.6255869565217385,
+        "std_deviation": 7.91759989724622,
+        "outlier_threshold": 2,
+        "array_size": 10000,
+        "process_measured": "Memory Allocation",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 99,
+        "programming_language": "Java",
+        "average_time": 3.607058686868687,
+        "std_deviation": 1.7087598867361318,
+        "outlier_threshold": 2,
+        "array_size": 100000,
+        "process_measured": "Memory Allocation",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 98,
+        "programming_language": "Java",
+        "average_time": 6.786890428571429,
+        "std_deviation": 1.5302077981758369,
+        "outlier_threshold": 2,
+        "array_size": 1000000,
+        "process_measured": "Memory Allocation",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 95,
+        "programming_language": "Java",
+        "average_time": 6.040775072631579,
+        "std_deviation": 0.9303279986123472,
+        "outlier_threshold": 2,
+        "array_size": 10000000,
+        "process_measured": "Memory Allocation",
+        "number_of_tests": 100
+    }
+]

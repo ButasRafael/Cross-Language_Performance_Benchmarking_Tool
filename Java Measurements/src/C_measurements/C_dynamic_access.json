@@ -1,0 +1,82 @@
+[
+{
+	"array_size":	1,
+	"number_of_tests":	100,
+	"passed_tests":	98,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Dynamic Memory Access",
+	"average_time":	43.989795918367349,
+	"std_deviation":	0.9529213724249016
+},
+{
+	"array_size":	10,
+	"number_of_tests":	100,
+	"passed_tests":	98,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Dynamic Memory Access",
+	"average_time":	9.2489795918367328,
+	"std_deviation":	0.3844542641409508
+},
+{
+	"array_size":	100,
+	"number_of_tests":	100,
+	"passed_tests":	98,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Dynamic Memory Access",
+	"average_time":	3.8531632653061219,
+	"std_deviation":	1.1220104013294072
+},
+{
+	"array_size":	1000,
+	"number_of_tests":	100,
+	"passed_tests":	84,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Dynamic Memory Access",
+	"average_time":	3.4065476190476174,
+	"std_deviation":	0.0876950078344997
+},
+{
+	"array_size":	10000,
+	"number_of_tests":	100,
+	"passed_tests":	98,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Dynamic Memory Access",
+	"average_time":	1.7806785714285707,
+	"std_deviation":	0.26104535310468757
+},
+{
+	"array_size":	100000,
+	"number_of_tests":	100,
+	"passed_tests":	96,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Dynamic Memory Access",
+	"average_time":	1.4690125,
+	"std_deviation":	0.26722962133871564
+},
+{
+	"array_size":	1000000,
+	"number_of_tests":	100,
+	"passed_tests":	95,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Dynamic Memory Access",
+	"average_time":	1.4290492842105269,
+	"std_deviation":	0.072671423352636863
+},
+{
+	"array_size":	10000000,
+	"number_of_tests":	100,
+	"passed_tests":	95,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Dynamic Memory Access",
+	"average_time":	1.5295400568421054,
+	"std_deviation":	0.126252471832007
+}
+]

@@ -1,0 +1,82 @@
+[
+{
+	"array_size":	1,
+	"number_of_tests":	100,
+	"passed_tests":	98,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Static Memory Access",
+	"average_time":	40.1734693877551,
+	"std_deviation":	1.96928201048453
+},
+{
+	"array_size":	10,
+	"number_of_tests":	100,
+	"passed_tests":	98,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Static Memory Access",
+	"average_time":	2.4795918367346945,
+	"std_deviation":	0.086848664616135648
+},
+{
+	"array_size":	100,
+	"number_of_tests":	100,
+	"passed_tests":	98,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Static Memory Access",
+	"average_time":	1.224081632653061,
+	"std_deviation":	0.012684293251641103
+},
+{
+	"array_size":	1000,
+	"number_of_tests":	100,
+	"passed_tests":	99,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Static Memory Access",
+	"average_time":	1.1706363636363637,
+	"std_deviation":	0.10693842791323724
+},
+{
+	"array_size":	10000,
+	"number_of_tests":	100,
+	"passed_tests":	97,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Static Memory Access",
+	"average_time":	1.1937463917525775,
+	"std_deviation":	0.1337264002201754
+},
+{
+	"array_size":	100000,
+	"number_of_tests":	100,
+	"passed_tests":	99,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Static Memory Access",
+	"average_time":	1.37876101010101,
+	"std_deviation":	0.023401098804165629
+},
+{
+	"array_size":	1000000,
+	"number_of_tests":	100,
+	"passed_tests":	95,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Static Memory Access",
+	"average_time":	1.4381787578947365,
+	"std_deviation":	0.088435703637307
+},
+{
+	"array_size":	10000000,
+	"number_of_tests":	100,
+	"passed_tests":	96,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Static Memory Access",
+	"average_time":	1.4666247302083324,
+	"std_deviation":	0.13170422828320272
+}
+]

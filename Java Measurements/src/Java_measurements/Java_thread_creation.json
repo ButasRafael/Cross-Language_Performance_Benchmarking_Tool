@@ -1,0 +1,52 @@
+[
+    {
+        "passed_tests": 97,
+        "programming_language": "Java",
+        "average_time": 45163.80927835051,
+        "std_deviation": 7299.977584502832,
+        "outlier_threshold": 2,
+        "iterations": 2,
+        "process_measured": "Thread Creation",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 96,
+        "programming_language": "Java",
+        "average_time": 28593.838541666668,
+        "std_deviation": 5003.1142246473555,
+        "outlier_threshold": 2,
+        "iterations": 10,
+        "process_measured": "Thread Creation",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 98,
+        "programming_language": "Java",
+        "average_time": 25379.274591836736,
+        "std_deviation": 4239.841626442265,
+        "outlier_threshold": 2,
+        "iterations": 100,
+        "process_measured": "Thread Creation",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 95,
+        "programming_language": "Java",
+        "average_time": 24722.44924210526,
+        "std_deviation": 1532.1401591351657,
+        "outlier_threshold": 2,
+        "iterations": 1000,
+        "process_measured": "Thread Creation",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 97,
+        "programming_language": "Java",
+        "average_time": 25608.655058762884,
+        "std_deviation": 1006.5636717960782,
+        "outlier_threshold": 2,
+        "iterations": 10000,
+        "process_measured": "Thread Creation",
+        "number_of_tests": 100
+    }
+]

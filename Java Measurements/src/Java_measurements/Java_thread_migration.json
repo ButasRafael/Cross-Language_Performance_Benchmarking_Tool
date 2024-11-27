@@ -1,0 +1,52 @@
+[
+    {
+        "passed_tests": 97,
+        "programming_language": "Java",
+        "average_time": 1052.0567010309278,
+        "std_deviation": 3591.8956657438025,
+        "outlier_threshold": 2,
+        "iterations": 2,
+        "process_measured": "Thread Migration",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 92,
+        "programming_language": "Java",
+        "average_time": 1140.1989130434783,
+        "std_deviation": 2641.679894066692,
+        "outlier_threshold": 2,
+        "iterations": 10,
+        "process_measured": "Thread Migration",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 99,
+        "programming_language": "Java",
+        "average_time": 1576.3337373737374,
+        "std_deviation": 1027.9129267958015,
+        "outlier_threshold": 2,
+        "iterations": 100,
+        "process_measured": "Thread Migration",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 100,
+        "programming_language": "Java",
+        "average_time": 7363.678419999999,
+        "std_deviation": 4701.093391066026,
+        "outlier_threshold": 2,
+        "iterations": 1000,
+        "process_measured": "Thread Migration",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 96,
+        "programming_language": "Java",
+        "average_time": 11527.890863541666,
+        "std_deviation": 801.5066250868942,
+        "outlier_threshold": 2,
+        "iterations": 10000,
+        "process_measured": "Thread Migration",
+        "number_of_tests": 100
+    }
+]

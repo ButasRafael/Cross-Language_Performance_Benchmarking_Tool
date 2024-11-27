@@ -9,14 +9,27 @@
 #include <stdint.h>
 #include <cjson/cJSON.h>
 #include <stdatomic.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include "JNInterface.h"
 
 #define NUM_TESTS 100
-#define CREATION_ITERATIONS 10000
-#define CONTEXT_SWITCH_ITERATIONS 10000
-#define MIGRATION_ITERATIONS 10000
 #define NUM_ARRAY_SIZES 8
+#define ITERATION_VALUES_COUNT 5
+typedef enum
+{
+    ALL,
+    STATIC_ACCESS,
+    DYNAMIC_ACCESS,
+    ALLOCATION,
+    DEALLOCATION,
+    THREAD_CREATION,
+    CONTEXT_SWITCH,
+    THREAD_MIGRATION
+} BenchmarkType;
 
 int ARRAY_SIZES[NUM_ARRAY_SIZES] = {1, 10, 100, 1000, 10000, 100000, 1000000, 10000000};
+int ITERATIONS[ITERATION_VALUES_COUNT] = {2, 10, 100, 1000, 10000};
 
 double calculateAverage(double *times, int size)
 {
@@ -181,11 +194,11 @@ void *CreateThreadFunction(void *arg)
     return NULL;
 }
 
-double measureThreadCreationTime()
+double measureThreadCreationTime(int iterations)
 {
     struct timespec start, end;
     clock_gettime(CLOCK_MONOTONIC, &start);
-    for (int i = 0; i < CREATION_ITERATIONS; i++)
+    for (int i = 0; i < iterations; i++)
     {
         pthread_t thread;
         if (pthread_create(&thread, NULL, CreateThreadFunction, NULL) != 0)
@@ -202,10 +215,10 @@ double measureThreadCreationTime()
     clock_gettime(CLOCK_MONOTONIC, &end);
 
     double time = (end.tv_sec - start.tv_sec) * 1e9 + (end.tv_nsec - start.tv_nsec);
-    return time / CREATION_ITERATIONS;
+    return time / iterations;
 }
 
-double measureContextSwitchTime()
+double measureContextSwitchTime(int iterations)
 {
     pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
     pthread_cond_t cond = PTHREAD_COND_INITIALIZER;
@@ -214,7 +227,7 @@ double measureContextSwitchTime()
     void *switchTask(void *arg)
     {
         int *turnPtr = (int *)arg;
-        for (int i = 0; i < CONTEXT_SWITCH_ITERATIONS / 2; ++i)
+        for (int i = 0; i < iterations / 2; ++i)
         {
             pthread_mutex_lock(&mutex);
             while (turn != *turnPtr)
@@ -256,10 +269,10 @@ double measureContextSwitchTime()
 
     clock_gettime(CLOCK_MONOTONIC, &end);
     double time = (end.tv_sec - start.tv_sec) * 1e9 + (end.tv_nsec - start.tv_nsec);
-    return time / CONTEXT_SWITCH_ITERATIONS;
+    return time / iterations;
 }
 
-double measureThreadMigrationTime()
+double measureThreadMigrationTime(int iterations)
 {
     cpu_set_t cpuset;
     CPU_ZERO(&cpuset);
@@ -286,11 +299,11 @@ double measureThreadMigrationTime()
     if (s != 0)
     {
         perror("Failed to set affinity");
-        exit(EXIT_FAILURE);
+        //exit(EXIT_FAILURE);
     }
     struct timespec start, end;
     clock_gettime(CLOCK_MONOTONIC, &start);
-    for (int i = 0; i < MIGRATION_ITERATIONS; i++)
+    for (int i = 0; i < iterations; i++)
     {
         CPU_ZERO(&cpuset);
         CPU_SET(i % 2, &cpuset);
@@ -298,7 +311,7 @@ double measureThreadMigrationTime()
         if (s2 != 0)
         {
             perror("Failed to set affinity in iteration");
-            exit(EXIT_FAILURE);
+            //exit(EXIT_FAILURE);
         }
     }
     clock_gettime(CLOCK_MONOTONIC, &end);
@@ -309,10 +322,23 @@ double measureThreadMigrationTime()
         exit(EXIT_FAILURE);
     }
     double time = (end.tv_sec - start.tv_sec) * 1e9 + (end.tv_nsec - start.tv_nsec);
-    return time / MIGRATION_ITERATIONS;
+    return time / iterations;
 }
 
-void saveResultsToJSON(FILE *file, double average, double stdDev, const char *process, int numTests, int passedTests, const char *language, int arraySize, double threshold, int isFirstEntry)
+void ensureDirectoryExists(const char *dirName)
+{
+    struct stat st = {0};
+    if (stat(dirName, &st) == -1)
+    {
+        if (mkdir(dirName, 0700) != 0)
+        {
+            perror("Failed to create directory");
+            exit(EXIT_FAILURE);
+        }
+    }
+}
+
+void saveResultsToJSON(FILE *file, double average, double stdDev, const char *process, int numTests, int passedTests, const char *language, int arraySize, double threshold, int iterations, int isFirstEntry)
 {
     if (!isFirstEntry)
     {
@@ -323,6 +349,10 @@ void saveResultsToJSON(FILE *file, double average, double stdDev, const char *pr
     if (arraySize > 0)
     {
         cJSON_AddNumberToObject(json, "array_size", arraySize);
+    }
+    if (iterations > 0)
+    {
+        cJSON_AddNumberToObject(json, "iterations", iterations);
     }
     cJSON_AddNumberToObject(json, "number_of_tests", numTests);
     cJSON_AddNumberToObject(json, "passed_tests", passedTests);
@@ -421,8 +451,9 @@ void combineJSONFiles(const char *outputFilename, const char **filenames, int nu
 
 void StaticAccessMain(int numTests, double threshold)
 {
+    ensureDirectoryExists("C_measurements");
     double staticAccessTimes[numTests];
-    FILE *staticAccessFile = fopen("C_static_access.json", "w");
+    FILE *staticAccessFile = fopen("C_measurements/C_static_access.json", "w");
     if (staticAccessFile == NULL)
     {
         perror("Failed to open static_access.json");
@@ -446,7 +477,7 @@ void StaticAccessMain(int numTests, double threshold)
         {
             double staticAverage = calculateAverage(staticAccessTimes, staticSize);
             double staticStdDev = calculateStandardDeviation(staticAccessTimes, staticAverage, staticSize);
-            saveResultsToJSON(staticAccessFile, staticAverage, staticStdDev, "Static Memory Access", numTests, staticSize, "C", size, threshold, (j == 0));
+            saveResultsToJSON(staticAccessFile, staticAverage, staticStdDev, "Static Memory Access", numTests, staticSize, "C", size, threshold, 0, (j == 0));
         }
         else
         {
@@ -460,8 +491,9 @@ void StaticAccessMain(int numTests, double threshold)
 
 void DynamicAccessMain(int numTests, double threshold)
 {
+    ensureDirectoryExists("C_measurements");
     double dynamicAccessTimes[numTests];
-    FILE *dynamicAccessFile = fopen("C_dynamic_access.json", "w");
+    FILE *dynamicAccessFile = fopen("C_measurements/C_dynamic_access.json", "w");
     if (dynamicAccessFile == NULL)
     {
         perror("Failed to open dynamic_access.json");
@@ -485,7 +517,7 @@ void DynamicAccessMain(int numTests, double threshold)
         {
             double dynamicAverage = calculateAverage(dynamicAccessTimes, dynamicSize);
             double dynamicStdDev = calculateStandardDeviation(dynamicAccessTimes, dynamicAverage, dynamicSize);
-            saveResultsToJSON(dynamicAccessFile, dynamicAverage, dynamicStdDev, "Dynamic Memory Access", numTests, dynamicSize, "C", size, threshold, (j == 0));
+            saveResultsToJSON(dynamicAccessFile, dynamicAverage, dynamicStdDev, "Dynamic Memory Access", numTests, dynamicSize, "C", size, threshold, 0, (j == 0));
         }
         else
         {
@@ -499,8 +531,9 @@ void DynamicAccessMain(int numTests, double threshold)
 
 void AllocationMain(int numTests, double threshold)
 {
+    ensureDirectoryExists("C_measurements");
     double allocTimes[numTests];
-    FILE *allocationFile = fopen("C_allocation.json", "w");
+    FILE *allocationFile = fopen("C_measurements/C_allocation.json", "w");
     if (allocationFile == NULL)
     {
         perror("Failed to open allocation.json");
@@ -524,7 +557,7 @@ void AllocationMain(int numTests, double threshold)
         {
             double allocAverage = calculateAverage(allocTimes, allocSize);
             double allocStdDev = calculateStandardDeviation(allocTimes, allocAverage, allocSize);
-            saveResultsToJSON(allocationFile, allocAverage, allocStdDev, "Memory Allocation", numTests, allocSize, "C", size, threshold, (j == 0));
+            saveResultsToJSON(allocationFile, allocAverage, allocStdDev, "Memory Allocation", numTests, allocSize, "C", size, threshold, 0, (j == 0));
         }
         else
         {
@@ -538,8 +571,9 @@ void AllocationMain(int numTests, double threshold)
 
 void DeallocationMain(int numTests, double threshold)
 {
+    ensureDirectoryExists("C_measurements");
     double deallocTimes[numTests];
-    FILE *deallocationFile = fopen("C_deallocation.json", "w");
+    FILE *deallocationFile = fopen("C_measurements/C_deallocation.json", "w");
     if (deallocationFile == NULL)
     {
         perror("Failed to open deallocation.json");
@@ -563,7 +597,7 @@ void DeallocationMain(int numTests, double threshold)
         {
             double deallocAverage = calculateAverage(deallocTimes, deallocSize);
             double deallocStdDev = calculateStandardDeviation(deallocTimes, deallocAverage, deallocSize);
-            saveResultsToJSON(deallocationFile, deallocAverage, deallocStdDev, "Memory Deallocation", numTests, deallocSize, "C", size, threshold, (j == 0));
+            saveResultsToJSON(deallocationFile, deallocAverage, deallocStdDev, "Memory Deallocation", numTests, deallocSize, "C", size, threshold, 0, (j == 0));
         }
         else
         {
@@ -577,8 +611,9 @@ void DeallocationMain(int numTests, double threshold)
 
 void ThreadCreationMain(int numTests, double threshold)
 {
+    ensureDirectoryExists("C_measurements");
     double threadCreationTimes[numTests];
-    FILE *threadCreationFile = fopen("C_thread_creation.json", "w");
+    FILE *threadCreationFile = fopen("C_measurements/C_thread_creation.json", "w");
     if (threadCreationFile == NULL)
     {
         perror("Failed to open thread_creation.json");
@@ -586,22 +621,26 @@ void ThreadCreationMain(int numTests, double threshold)
     }
     fprintf(threadCreationFile, "[\n");
 
-    for (int i = 0; i < numTests; i++)
+    for (int iterIndex = 0; iterIndex < ITERATION_VALUES_COUNT; iterIndex++)
     {
-        threadCreationTimes[i] = measureThreadCreationTime();
-    }
+        int iterations = ITERATIONS[iterIndex];
+        int creationSize = 0;
 
-    removeOutliers(threadCreationTimes, &numTests, threshold);
+        for (int i = 0; i < numTests; i++)
+        {
+            threadCreationTimes[creationSize++] = measureThreadCreationTime(iterations);
+        }
 
-    if (numTests)
-    {
-        double creationAverage = calculateAverage(threadCreationTimes, numTests);
-        double creationStdDev = calculateStandardDeviation(threadCreationTimes, creationAverage, numTests);
-        saveResultsToJSON(threadCreationFile, creationAverage, creationStdDev, "Thread Creation", numTests, numTests, "C", 0, threshold, 1);
-    }
-    else
-    {
-        fprintf(stderr, "All thread creation times were outliers\n");
+        if (creationSize)
+        {
+            double creationAverage = calculateAverage(threadCreationTimes, creationSize);
+            double creationStdDev = calculateStandardDeviation(threadCreationTimes, creationAverage, creationSize);
+            saveResultsToJSON(threadCreationFile, creationAverage, creationStdDev, "Thread Creation", creationSize, numTests, "C", 0, threshold, iterations, (iterIndex == 0));
+        }
+        else
+        {
+            fprintf(stderr, "All thread creation times were outliers for %d iterations\n", iterations);
+        }
     }
 
     fprintf(threadCreationFile, "\n]");
@@ -610,8 +649,9 @@ void ThreadCreationMain(int numTests, double threshold)
 
 void ContextSwitchMain(int numTests, double threshold)
 {
+    ensureDirectoryExists("C_measurements");
     double contextSwitchTimes[numTests];
-    FILE *contextSwitchFile = fopen("C_context_switch.json", "w");
+    FILE *contextSwitchFile = fopen("C_measurements/C_context_switch.json", "w");
     if (contextSwitchFile == NULL)
     {
         perror("Failed to open context_switch.json");
@@ -619,22 +659,26 @@ void ContextSwitchMain(int numTests, double threshold)
     }
     fprintf(contextSwitchFile, "[\n");
 
-    for (int i = 0; i < numTests; i++)
+    for (int iterIndex = 0; iterIndex < ITERATION_VALUES_COUNT; iterIndex++)
     {
-        contextSwitchTimes[i] = measureContextSwitchTime();
-    }
+        int iterations = ITERATIONS[iterIndex];
+        int contextSwitchSize = 0;
 
-    removeOutliers(contextSwitchTimes, &numTests, threshold);
+        for (int i = 0; i < numTests; i++)
+        {
+            contextSwitchTimes[contextSwitchSize++] = measureContextSwitchTime(iterations);
+        }
 
-    if (numTests)
-    {
-        double switchAverage = calculateAverage(contextSwitchTimes, numTests);
-        double switchStdDev = calculateStandardDeviation(contextSwitchTimes, switchAverage, numTests);
-        saveResultsToJSON(contextSwitchFile, switchAverage, switchStdDev, "Context Switch", numTests, numTests, "C", 0, threshold, 1);
-    }
-    else
-    {
-        fprintf(stderr, "All context switch times were outliers\n");
+        if (contextSwitchSize)
+        {
+            double switchAverage = calculateAverage(contextSwitchTimes, contextSwitchSize);
+            double switchStdDev = calculateStandardDeviation(contextSwitchTimes, switchAverage, contextSwitchSize);
+            saveResultsToJSON(contextSwitchFile, switchAverage, switchStdDev, "Context Switch", numTests, contextSwitchSize, "C", 0, threshold, iterations, (iterIndex == 0));
+        }
+        else
+        {
+            fprintf(stderr, "All context switch times were outliers for %d iterations\n", iterations);
+        }
     }
 
     fprintf(contextSwitchFile, "\n]");
@@ -643,8 +687,9 @@ void ContextSwitchMain(int numTests, double threshold)
 
 void ThreadMigrationMain(int numTests, double threshold)
 {
+    ensureDirectoryExists("C_measurements");
     double migrationTimes[numTests];
-    FILE *migrationFile = fopen("C_thread_migration.json", "w");
+    FILE *migrationFile = fopen("C_measurements/C_thread_migration.json", "w");
     if (migrationFile == NULL)
     {
         perror("Failed to open thread_migration.json");
@@ -652,39 +697,34 @@ void ThreadMigrationMain(int numTests, double threshold)
     }
     fprintf(migrationFile, "[\n");
 
-    for (int i = 0; i < numTests; i++)
+    for (int iterIndex = 0; iterIndex < ITERATION_VALUES_COUNT; iterIndex++)
     {
-        migrationTimes[i] = measureThreadMigrationTime();
-    }
+        int iterations = ITERATIONS[iterIndex];
+        int migrationSize = 0;
 
-    removeOutliers(migrationTimes, &numTests, threshold);
+        for (int i = 0; i < numTests; i++)
+        {
+            migrationTimes[migrationSize++] = measureThreadMigrationTime(iterations);
+        }
 
-    if (numTests)
-    {
-        double migrationAverage = calculateAverage(migrationTimes, numTests);
-        double migrationStdDev = calculateStandardDeviation(migrationTimes, migrationAverage, numTests);
-        saveResultsToJSON(migrationFile, migrationAverage, migrationStdDev, "Thread Migration", numTests, numTests, "C", 0, threshold, 1);
-    }
-    else
-    {
-        fprintf(stderr, "All thread migration times were outliers\n");
+        if (migrationSize)
+        {
+            double migrationAverage = calculateAverage(migrationTimes, migrationSize);
+            double migrationStdDev = calculateStandardDeviation(migrationTimes, migrationAverage, migrationSize);
+            saveResultsToJSON(migrationFile, migrationAverage, migrationStdDev, "Thread Migration", numTests, migrationSize, "C", 0, threshold, iterations, (iterIndex == 0));
+        }
+        else
+        {
+            fprintf(stderr, "All thread migration times were outliers for %d iterations\n", iterations);
+        }
     }
 
     fprintf(migrationFile, "\n]");
     fclose(migrationFile);
 }
 
-int main(int argc, char *argv[])
+void callAll_C_Benchmarks(int numTests, double threshold)
 {
-    if (argc != 3)
-    {
-        fprintf(stderr, "Usage: %s <number_of_tests> <outlier_threshold>\n", argv[0]);
-        return 1;
-    }
-
-    int numTests = atoi(argv[1]);
-    double threshold = atof(argv[2]);
-
     StaticAccessMain(numTests, threshold);
     DynamicAccessMain(numTests, threshold);
     AllocationMain(numTests, threshold);
@@ -694,17 +734,48 @@ int main(int argc, char *argv[])
     ThreadMigrationMain(numTests, threshold);
 
     const char *filenames[] = {
-        "C_static_access.json",
-        "C_dynamic_access.json",
-        "C_allocation.json",
-        "C_deallocation.json",
-        "C_thread_creation.json",
-        "C_context_switch.json",
-        "C_thread_migration.json"};
+        "C_measurements/C_static_access.json",
+        "C_measurements/C_dynamic_access.json",
+        "C_measurements/C_allocation.json",
+        "C_measurements/C_deallocation.json",
+        "C_measurements/C_thread_creation.json",
+        "C_measurements/C_context_switch.json",
+        "C_measurements/C_thread_migration.json"};
     int numFiles = sizeof(filenames) / sizeof(filenames[0]);
 
-    combineJSONFiles("C_results.json", filenames, numFiles);
-
-    return 0;
+    combineJSONFiles("C_measurements/C_results.json", filenames, numFiles);
 }
 
+JNIEXPORT void JNICALL Java_JNInterface_callNative_1C_1Benchmark(JNIEnv *env, jobject obj, jint benchmarkType, jint numTests, jdouble threshold)
+{
+    switch (benchmarkType)
+    {
+    case ALL:
+        callAll_C_Benchmarks(numTests, threshold);
+        break;
+    case STATIC_ACCESS:
+        StaticAccessMain(numTests, threshold);
+        break;
+    case DYNAMIC_ACCESS:
+        DynamicAccessMain(numTests, threshold);
+        break;
+    case ALLOCATION:
+        AllocationMain(numTests, threshold);
+        break;
+    case DEALLOCATION:
+        DeallocationMain(numTests, threshold);
+        break;
+    case THREAD_CREATION:
+        ThreadCreationMain(numTests, threshold);
+        break;
+    case CONTEXT_SWITCH:
+        ContextSwitchMain(numTests, threshold);
+        break;
+    case THREAD_MIGRATION:
+        ThreadMigrationMain(numTests, threshold);
+        break;
+    default:
+        fprintf(stderr, "Invalid benchmark type\n");
+        exit(EXIT_FAILURE);
+    }
+}

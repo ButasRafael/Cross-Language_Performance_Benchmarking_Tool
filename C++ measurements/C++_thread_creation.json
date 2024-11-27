@@ -1,0 +1,11 @@
+[
+    {
+        "number_of_tests": 100,
+        "passed_tests": 99,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Thread Creation",
+        "average_time": 34031.72656666668,
+        "std_deviation": 2626.490101685665
+    }
+]

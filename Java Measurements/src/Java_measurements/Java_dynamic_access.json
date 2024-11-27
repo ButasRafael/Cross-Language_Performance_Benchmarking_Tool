@@ -1,0 +1,82 @@
+[
+    {
+        "passed_tests": 98,
+        "programming_language": "Java",
+        "average_time": 102.9795918367347,
+        "std_deviation": 2.2314065841094113,
+        "outlier_threshold": 2,
+        "array_size": 1,
+        "process_measured": "Dynamic Memory Access",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 97,
+        "programming_language": "Java",
+        "average_time": 16.87216494845361,
+        "std_deviation": 4.696757869877468,
+        "outlier_threshold": 2,
+        "array_size": 10,
+        "process_measured": "Dynamic Memory Access",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 99,
+        "programming_language": "Java",
+        "average_time": 3.418080808080808,
+        "std_deviation": 0.402817543396553,
+        "outlier_threshold": 2,
+        "array_size": 100,
+        "process_measured": "Dynamic Memory Access",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 98,
+        "programming_language": "Java",
+        "average_time": 3.2501326530612245,
+        "std_deviation": 0.24092215008829168,
+        "outlier_threshold": 2,
+        "array_size": 1000,
+        "process_measured": "Dynamic Memory Access",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 98,
+        "programming_language": "Java",
+        "average_time": 0.18126020408163265,
+        "std_deviation": 2.895245208036895E-4,
+        "outlier_threshold": 2,
+        "array_size": 10000,
+        "process_measured": "Dynamic Memory Access",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 99,
+        "programming_language": "Java",
+        "average_time": 0.18107444444444443,
+        "std_deviation": 0.002424011293695655,
+        "outlier_threshold": 2,
+        "array_size": 100000,
+        "process_measured": "Dynamic Memory Access",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 95,
+        "programming_language": "Java",
+        "average_time": 0.19245153684210528,
+        "std_deviation": 0.0211513584905559,
+        "outlier_threshold": 2,
+        "array_size": 1000000,
+        "process_measured": "Dynamic Memory Access",
+        "number_of_tests": 100
+    },
+    {
+        "passed_tests": 94,
+        "programming_language": "Java",
+        "average_time": 0.19945245531914896,
+        "std_deviation": 0.013296762157323457,
+        "outlier_threshold": 2,
+        "array_size": 10000000,
+        "process_measured": "Dynamic Memory Access",
+        "number_of_tests": 100
+    }
+]
