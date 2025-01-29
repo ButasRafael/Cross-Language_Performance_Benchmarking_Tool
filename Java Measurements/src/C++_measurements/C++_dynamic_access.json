@@ -2,81 +2,81 @@
     {
         "array_size": 1,
         "number_of_tests": 100,
-        "passed_tests": 95,
+        "passed_tests": 97,
         "outlier_threshold": 2.0,
         "programming_language": "C++",
         "process_measured": "Dynamic Memory Access",
-        "average_time": 33.97894736842105,
-        "std_deviation": 18.804243052744866
+        "average_time": 19.24742268041237,
+        "std_deviation": 1.8997065852391697
     },
     {
         "array_size": 10,
+        "number_of_tests": 100,
+        "passed_tests": 97,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Dynamic Memory Access",
+        "average_time": 3.041237113402063,
+        "std_deviation": 0.14626101320386145
+    },
+    {
+        "array_size": 100,
+        "number_of_tests": 100,
+        "passed_tests": 98,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Dynamic Memory Access",
+        "average_time": 1.4351020408163278,
+        "std_deviation": 0.01611469718061201
+    },
+    {
+        "array_size": 1000,
         "number_of_tests": 100,
         "passed_tests": 99,
         "outlier_threshold": 2.0,
         "programming_language": "C++",
         "process_measured": "Dynamic Memory Access",
-        "average_time": 3.89090909090909,
-        "std_deviation": 0.8701666981932992
-    },
-    {
-        "array_size": 100,
-        "number_of_tests": 100,
-        "passed_tests": 95,
-        "outlier_threshold": 2.0,
-        "programming_language": "C++",
-        "process_measured": "Dynamic Memory Access",
-        "average_time": 1.2315789473684209,
-        "std_deviation": 0.020329692542976813
-    },
-    {
-        "array_size": 1000,
-        "number_of_tests": 100,
-        "passed_tests": 83,
-        "outlier_threshold": 2.0,
-        "programming_language": "C++",
-        "process_measured": "Dynamic Memory Access",
-        "average_time": 3.410036144578314,
-        "std_deviation": 0.05923293730893447
+        "average_time": 1.4741313131313134,
+        "std_deviation": 0.11904864012855214
     },
     {
         "array_size": 10000,
+        "number_of_tests": 100,
+        "passed_tests": 99,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Dynamic Memory Access",
+        "average_time": 1.4161383838383839,
+        "std_deviation": 0.07667457628114466
+    },
+    {
+        "array_size": 100000,
         "number_of_tests": 100,
         "passed_tests": 96,
         "outlier_threshold": 2.0,
         "programming_language": "C++",
         "process_measured": "Dynamic Memory Access",
-        "average_time": 1.438930208333334,
-        "std_deviation": 0.030611878548856327
-    },
-    {
-        "array_size": 100000,
-        "number_of_tests": 100,
-        "passed_tests": 95,
-        "outlier_threshold": 2.0,
-        "programming_language": "C++",
-        "process_measured": "Dynamic Memory Access",
-        "average_time": 1.4217017894736848,
-        "std_deviation": 0.15991237021357696
+        "average_time": 1.5083870833333333,
+        "std_deviation": 0.0963596093841176
     },
     {
         "array_size": 1000000,
         "number_of_tests": 100,
-        "passed_tests": 95,
+        "passed_tests": 92,
         "outlier_threshold": 2.0,
         "programming_language": "C++",
         "process_measured": "Dynamic Memory Access",
-        "average_time": 1.4077488631578947,
-        "std_deviation": 0.05513979116822997
+        "average_time": 1.4973615217391307,
+        "std_deviation": 0.0268435284045531
     },
     {
         "array_size": 10000000,
         "number_of_tests": 100,
-        "passed_tests": 94,
+        "passed_tests": 98,
         "outlier_threshold": 2.0,
         "programming_language": "C++",
         "process_measured": "Dynamic Memory Access",
-        "average_time": 1.4666114010638298,
-        "std_deviation": 0.08395385355215507
+        "average_time": 1.5073760122448985,
+        "std_deviation": 0.03444293880888364
     }
 ]

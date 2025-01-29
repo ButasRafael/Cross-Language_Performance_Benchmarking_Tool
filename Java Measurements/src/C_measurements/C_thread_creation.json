@@ -6,8 +6,8 @@
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Thread Creation",
-	"average_time":	6798.635,
-	"std_deviation":	3009.3658259299409
+	"average_time":	8440.98,
+	"std_deviation":	5910.8027330981031
 },
 {
 	"iterations":	10,
@@ -16,8 +16,8 @@
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Thread Creation",
-	"average_time":	4722.724,
-	"std_deviation":	689.73735524763333
+	"average_time":	5578.18,
+	"std_deviation":	3413.3472337575026
 },
 {
 	"iterations":	100,
@@ -26,8 +26,8 @@
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Thread Creation",
-	"average_time":	5701.0358,
-	"std_deviation":	3577.025427641011
+	"average_time":	5412.4563,
+	"std_deviation":	4316.3189077290517
 },
 {
 	"iterations":	1000,
@@ -36,8 +36,8 @@
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Thread Creation",
-	"average_time":	5780.7916300000015,
-	"std_deviation":	1823.8030627651638
+	"average_time":	6172.9565200000025,
+	"std_deviation":	1740.2971108025058
 },
 {
 	"iterations":	10000,
@@ -46,7 +46,7 @@
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Thread Creation",
-	"average_time":	5851.3072880000027,
-	"std_deviation":	647.47751439682929
+	"average_time":	6036.7093140000015,
+	"std_deviation":	309.865624583205
 }
 ]

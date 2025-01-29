@@ -6,28 +6,28 @@
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Memory Allocation",
-	"average_time":	15.858585858585858,
-	"std_deviation":	2.9678754806916916
+	"average_time":	16.626262626262626,
+	"std_deviation":	1.2275117196738021
 },
 {
 	"array_size":	10,
 	"number_of_tests":	100,
-	"passed_tests":	99,
+	"passed_tests":	98,
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Memory Allocation",
-	"average_time":	20.1949494949495,
-	"std_deviation":	10.517703917895767
+	"average_time":	6.55714285714286,
+	"std_deviation":	0.193253560835267
 },
 {
 	"array_size":	100,
 	"number_of_tests":	100,
-	"passed_tests":	92,
+	"passed_tests":	98,
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Memory Allocation",
-	"average_time":	14.660217391304361,
-	"std_deviation":	7.7358784355839125
+	"average_time":	9.344489795918367,
+	"std_deviation":	0.1157858900939847
 },
 {
 	"array_size":	1000,
@@ -36,47 +36,47 @@
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Memory Allocation",
-	"average_time":	12.164103092783506,
-	"std_deviation":	0.54003330337426536
+	"average_time":	12.43272164948454,
+	"std_deviation":	0.0571627703562815
 },
 {
 	"array_size":	10000,
 	"number_of_tests":	100,
-	"passed_tests":	98,
+	"passed_tests":	97,
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Memory Allocation",
-	"average_time":	12.41440714285714,
-	"std_deviation":	1.016638750104621
+	"average_time":	12.853649484536078,
+	"std_deviation":	0.30183160121071656
 },
 {
 	"array_size":	100000,
-	"number_of_tests":	100,
-	"passed_tests":	98,
-	"outlier_threshold":	2,
-	"programming_language":	"C",
-	"process_measured":	"Memory Allocation",
-	"average_time":	12.473852959183674,
-	"std_deviation":	1.0538294647474109
-},
-{
-	"array_size":	1000000,
 	"number_of_tests":	100,
 	"passed_tests":	95,
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Memory Allocation",
-	"average_time":	19.2495524,
-	"std_deviation":	1.4507290150693084
+	"average_time":	13.3075932631579,
+	"std_deviation":	0.629844067790955
+},
+{
+	"array_size":	1000000,
+	"number_of_tests":	100,
+	"passed_tests":	97,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Memory Allocation",
+	"average_time":	18.947579701030929,
+	"std_deviation":	0.678670188936266
 },
 {
 	"array_size":	10000000,
 	"number_of_tests":	100,
-	"passed_tests":	98,
+	"passed_tests":	99,
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Memory Allocation",
-	"average_time":	13.869917248979588,
-	"std_deviation":	0.58001004625016939
+	"average_time":	14.321559908080808,
+	"std_deviation":	0.48061395337246365
 }
 ]

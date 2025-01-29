@@ -64,6 +64,7 @@ public class BenchmarkResult {
     public String toString() {
         return "BenchmarkResult{" +
                 "arraySize=" + arraySize +
+                ", iterations=" + iterations +
                 ", numberOfTests=" + numberOfTests +
                 ", passedTests=" + passedTests +
                 ", outlierThreshold=" + outlierThreshold +

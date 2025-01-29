@@ -2,51 +2,51 @@
     {
         "iterations": 2,
         "number_of_tests": 100,
-        "passed_tests": 99,
+        "passed_tests": 98,
         "outlier_threshold": 2.0,
         "programming_language": "C++",
         "process_measured": "Thread Migration",
-        "average_time": 244.28787878787878,
-        "std_deviation": 7.5311108645401355
+        "average_time": 257.01020408163265,
+        "std_deviation": 55.17116129586056
     },
     {
         "iterations": 10,
         "number_of_tests": 100,
-        "passed_tests": 99,
+        "passed_tests": 96,
         "outlier_threshold": 2.0,
         "programming_language": "C++",
         "process_measured": "Thread Migration",
-        "average_time": 295.28080808080796,
-        "std_deviation": 3.970285509100456
+        "average_time": 337.5249999999999,
+        "std_deviation": 128.86581845728784
     },
     {
         "iterations": 100,
         "number_of_tests": 100,
-        "passed_tests": 98,
+        "passed_tests": 96,
         "outlier_threshold": 2.0,
         "programming_language": "C++",
         "process_measured": "Thread Migration",
-        "average_time": 368.8648979591837,
-        "std_deviation": 206.9009990025541
+        "average_time": 1625.7792708333336,
+        "std_deviation": 1189.5684624119347
     },
     {
         "iterations": 1000,
         "number_of_tests": 100,
-        "passed_tests": 98,
+        "passed_tests": 94,
         "outlier_threshold": 2.0,
         "programming_language": "C++",
         "process_measured": "Thread Migration",
-        "average_time": 8436.182979591838,
-        "std_deviation": 4093.0099056811246
+        "average_time": 12551.946882978726,
+        "std_deviation": 1159.4958467073127
     },
     {
         "iterations": 10000,
         "number_of_tests": 100,
-        "passed_tests": 99,
+        "passed_tests": 95,
         "outlier_threshold": 2.0,
         "programming_language": "C++",
         "process_measured": "Thread Migration",
-        "average_time": 11263.995887878786,
-        "std_deviation": 2605.1790444349
+        "average_time": 12473.699802105257,
+        "std_deviation": 350.6367804214936
     }
 ]

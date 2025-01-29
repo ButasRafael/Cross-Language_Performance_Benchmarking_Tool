@@ -50,7 +50,6 @@ void removeOutliers(std::vector<double> &times, double threshold)
                                }),
                 times.end());
 }
-
 double measureStaticMemoryAccess(int size)
 {
     int staticArray[size];

@@ -6,48 +6,48 @@
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Memory Deallocation",
-	"average_time":	18.444444444444443,
-	"std_deviation":	1.2327371386366921
+	"average_time":	19.757575757575758,
+	"std_deviation":	0.53353990489875747
 },
 {
 	"array_size":	10,
-	"number_of_tests":	100,
-	"passed_tests":	97,
-	"outlier_threshold":	2,
-	"programming_language":	"C",
-	"process_measured":	"Memory Deallocation",
-	"average_time":	17.554639175257737,
-	"std_deviation":	2.05336136883955
-},
-{
-	"array_size":	100,
-	"number_of_tests":	100,
-	"passed_tests":	99,
-	"outlier_threshold":	2,
-	"programming_language":	"C",
-	"process_measured":	"Memory Deallocation",
-	"average_time":	7.0537373737373636,
-	"std_deviation":	2.276368091632635
-},
-{
-	"array_size":	1000,
 	"number_of_tests":	100,
 	"passed_tests":	96,
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Memory Deallocation",
-	"average_time":	6.3430416666666671,
-	"std_deviation":	0.016593746730487215
+	"average_time":	18.580208333333328,
+	"std_deviation":	2.3977254756533788
 },
 {
-	"array_size":	10000,
+	"array_size":	100,
+	"number_of_tests":	100,
+	"passed_tests":	98,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Memory Deallocation",
+	"average_time":	17.742959183673452,
+	"std_deviation":	1.2852294396798345
+},
+{
+	"array_size":	1000,
 	"number_of_tests":	100,
 	"passed_tests":	95,
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Memory Deallocation",
-	"average_time":	6.39341157894737,
-	"std_deviation":	0.1348745076480222
+	"average_time":	7.1735157894736856,
+	"std_deviation":	0.35630524652053752
+},
+{
+	"array_size":	10000,
+	"number_of_tests":	100,
+	"passed_tests":	98,
+	"outlier_threshold":	2,
+	"programming_language":	"C",
+	"process_measured":	"Memory Deallocation",
+	"average_time":	7.143167346938772,
+	"std_deviation":	0.487954035091779
 },
 {
 	"array_size":	100000,
@@ -56,27 +56,27 @@
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Memory Deallocation",
-	"average_time":	6.537504375,
-	"std_deviation":	0.30931525083916045
+	"average_time":	7.4285539583333318,
+	"std_deviation":	0.849394496314727
 },
 {
 	"array_size":	1000000,
 	"number_of_tests":	100,
-	"passed_tests":	93,
+	"passed_tests":	99,
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Memory Deallocation",
-	"average_time":	7.6181866344086018,
-	"std_deviation":	0.61578876265391025
+	"average_time":	8.1977301313131345,
+	"std_deviation":	0.732726253057132
 },
 {
 	"array_size":	10000000,
 	"number_of_tests":	100,
-	"passed_tests":	97,
+	"passed_tests":	98,
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Memory Deallocation",
-	"average_time":	7.7893014278350527,
-	"std_deviation":	0.32251225747653
+	"average_time":	8.0193971520408169,
+	"std_deviation":	0.24685679386655324
 }
 ]

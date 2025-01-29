@@ -6,8 +6,8 @@
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Context Switch",
-	"average_time":	11575.89,
-	"std_deviation":	3809.6925621236169
+	"average_time":	4899.055,
+	"std_deviation":	3360.1018294800233
 },
 {
 	"iterations":	10,
@@ -16,8 +16,8 @@
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Context Switch",
-	"average_time":	1422.05,
-	"std_deviation":	444.176867587676
+	"average_time":	2366.1619999999984,
+	"std_deviation":	1998.4534193610816
 },
 {
 	"iterations":	100,
@@ -26,8 +26,8 @@
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Context Switch",
-	"average_time":	707.9195,
-	"std_deviation":	61.657875172195176
+	"average_time":	1057.4959,
+	"std_deviation":	1720.5708261685111
 },
 {
 	"iterations":	1000,
@@ -36,8 +36,8 @@
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Context Switch",
-	"average_time":	698.22104999999976,
-	"std_deviation":	276.4699627885596
+	"average_time":	689.3527,
+	"std_deviation":	157.5282126525594
 },
 {
 	"iterations":	10000,
@@ -46,7 +46,7 @@
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Context Switch",
-	"average_time":	664.58086799999955,
-	"std_deviation":	90.0649251908343
+	"average_time":	710.83280999999954,
+	"std_deviation":	64.6536403489293
 }
 ]

@@ -86,7 +86,6 @@ public class GraphGenerator {
         CategoryPlot plot = chart.getCategoryPlot();
         BarRenderer renderer = new BarRenderer();
 
-        // Add tooltip generator
         renderer.setDefaultToolTipGenerator((dataset1, row, column) -> {
             String series = (String) dataset1.getRowKey(row);
             String category = (String) dataset1.getColumnKey(column);
@@ -184,9 +183,9 @@ public class GraphGenerator {
                     }
 
                     try {
-                        if (choice == 0) { // Export as PNG
+                        if (choice == 0) {
                             ChartUtils.saveChartAsPNG(finalFile, currentChart[0], 1000, 800);
-                        } else { // Export as CSV
+                        } else {
                             try (FileWriter writer = new FileWriter(finalFile)) {
                                 for (int row = 0; row < dataset.getRowCount(); row++) {
                                     for (int col = 0; col < dataset.getColumnCount(); col++) {
@@ -238,7 +237,6 @@ public class GraphGenerator {
             dataset.clear();
             addDataToDataset(dataset, benchmarkStorage.getResults(), measurement, showStandardDeviation);
 
-            // Update the Y-axis label and range for both charts
             String yAxisLabel = showStandardDeviation ? "Standard Deviation" : "Average Time (ns)";
             lineChart.getCategoryPlot().getRangeAxis().setLabel(yAxisLabel);
             barChart.getCategoryPlot().getRangeAxis().setLabel(yAxisLabel);
@@ -247,7 +245,7 @@ public class GraphGenerator {
             rangeSlider.setMaximum((int) Math.ceil(newMaxValue));
             rangeSlider.setValue((int) Math.ceil(newMaxValue));
 
-            currentChart[0].setNotify(true); // Refresh active chart
+            currentChart[0].setNotify(true);
         });
 
 
@@ -262,7 +260,6 @@ public class GraphGenerator {
                 boolean visible = checkBox.isSelected();
                 int seriesIndex = dataset.getRowIndex(language);
 
-                // Update visibility for both charts
                 LineAndShapeRenderer lineRenderer = (LineAndShapeRenderer) lineChart.getCategoryPlot().getRenderer();
                 BarRenderer barRenderer = (BarRenderer) barChart.getCategoryPlot().getRenderer();
                 lineRenderer.setSeriesVisible(seriesIndex, visible);
@@ -272,7 +269,7 @@ public class GraphGenerator {
                 rangeSlider.setMaximum((int) Math.ceil(newMaxValue));
                 rangeSlider.setValue((int) Math.ceil(newMaxValue));
 
-                currentChart[0].setNotify(true); // Refresh active chart
+                currentChart[0].setNotify(true);
             });
 
             filterPanel.add(checkBox);

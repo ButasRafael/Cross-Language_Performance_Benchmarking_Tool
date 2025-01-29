@@ -6,8 +6,8 @@
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Thread Migration",
-	"average_time":	236.21,
-	"std_deviation":	24.977007426831591
+	"average_time":	627.52,
+	"std_deviation":	2259.704611138367
 },
 {
 	"iterations":	10,
@@ -16,8 +16,8 @@
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Thread Migration",
-	"average_time":	462.911,
-	"std_deviation":	1550.58468894124
+	"average_time":	470.71,
+	"std_deviation":	697.68444364196637
 },
 {
 	"iterations":	100,
@@ -26,8 +26,8 @@
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Thread Migration",
-	"average_time":	1213.6244,
-	"std_deviation":	2296.353735867503
+	"average_time":	1775.3423000000005,
+	"std_deviation":	1759.444294376412
 },
 {
 	"iterations":	1000,
@@ -36,8 +36,8 @@
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Thread Migration",
-	"average_time":	6649.98719,
-	"std_deviation":	4984.8561979149872
+	"average_time":	13190.01673,
+	"std_deviation":	4463.6866604479237
 },
 {
 	"iterations":	10000,
@@ -46,7 +46,7 @@
 	"outlier_threshold":	2,
 	"programming_language":	"C",
 	"process_measured":	"Thread Migration",
-	"average_time":	11299.680518,
-	"std_deviation":	1436.8781455532539
+	"average_time":	13114.906546,
+	"std_deviation":	1077.1518589294978
 }
 ]

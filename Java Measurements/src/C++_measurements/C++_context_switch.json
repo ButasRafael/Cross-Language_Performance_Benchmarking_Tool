@@ -2,12 +2,12 @@
     {
         "iterations": 2,
         "number_of_tests": 100,
-        "passed_tests": 99,
+        "passed_tests": 98,
         "outlier_threshold": 2.0,
         "programming_language": "C++",
         "process_measured": "Context Switch",
-        "average_time": 4685.121212121212,
-        "std_deviation": 454.8243144608621
+        "average_time": 5112.09693877551,
+        "std_deviation": 783.5152202074644
     },
     {
         "iterations": 10,
@@ -16,37 +16,37 @@
         "outlier_threshold": 2.0,
         "programming_language": "C++",
         "process_measured": "Context Switch",
-        "average_time": 1524.0090909090904,
-        "std_deviation": 499.8574277723334
+        "average_time": 1543.5606060606065,
+        "std_deviation": 96.33818150553967
     },
     {
         "iterations": 100,
         "number_of_tests": 100,
-        "passed_tests": 97,
+        "passed_tests": 99,
         "outlier_threshold": 2.0,
         "programming_language": "C++",
         "process_measured": "Context Switch",
-        "average_time": 712.9486597938146,
-        "std_deviation": 20.4679585467097
+        "average_time": 727.7662626262627,
+        "std_deviation": 84.22033599507279
     },
     {
         "iterations": 1000,
         "number_of_tests": 100,
-        "passed_tests": 93,
+        "passed_tests": 95,
         "outlier_threshold": 2.0,
         "programming_language": "C++",
         "process_measured": "Context Switch",
-        "average_time": 656.5207419354838,
-        "std_deviation": 59.46727873845463
+        "average_time": 643.7836736842104,
+        "std_deviation": 20.760602275738847
     },
     {
         "iterations": 10000,
         "number_of_tests": 100,
-        "passed_tests": 94,
+        "passed_tests": 96,
         "outlier_threshold": 2.0,
         "programming_language": "C++",
         "process_measured": "Context Switch",
-        "average_time": 643.8444436170212,
-        "std_deviation": 34.33270013207295
+        "average_time": 649.7943770833334,
+        "std_deviation": 23.588604680215294
     }
 ]

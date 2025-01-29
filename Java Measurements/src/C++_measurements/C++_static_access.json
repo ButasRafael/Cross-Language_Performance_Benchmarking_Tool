@@ -2,32 +2,32 @@
     {
         "array_size": 1,
         "number_of_tests": 100,
-        "passed_tests": 98,
+        "passed_tests": 97,
         "outlier_threshold": 2.0,
         "programming_language": "C++",
         "process_measured": "Static Memory Access",
-        "average_time": 14.520408163265307,
-        "std_deviation": 0.5755138225389214
+        "average_time": 16.68041237113402,
+        "std_deviation": 3.608541961468921
     },
     {
         "array_size": 10,
         "number_of_tests": 100,
-        "passed_tests": 98,
+        "passed_tests": 99,
         "outlier_threshold": 2.0,
         "programming_language": "C++",
         "process_measured": "Static Memory Access",
-        "average_time": 2.472448979591838,
-        "std_deviation": 0.07529616658927868
+        "average_time": 2.7282828282828255,
+        "std_deviation": 0.12312464247225241
     },
     {
         "array_size": 100,
         "number_of_tests": 100,
-        "passed_tests": 98,
+        "passed_tests": 97,
         "outlier_threshold": 2.0,
         "programming_language": "C++",
         "process_measured": "Static Memory Access",
-        "average_time": 1.290714285714286,
-        "std_deviation": 0.13255918970599592
+        "average_time": 1.4410309278350528,
+        "std_deviation": 0.02711124604339906
     },
     {
         "array_size": 1000,
@@ -36,47 +36,47 @@
         "outlier_threshold": 2.0,
         "programming_language": "C++",
         "process_measured": "Static Memory Access",
-        "average_time": 1.2585000000000006,
-        "std_deviation": 0.1251489113016969
+        "average_time": 1.26273,
+        "std_deviation": 0.1395568597382444
     },
     {
         "array_size": 10000,
+        "number_of_tests": 100,
+        "passed_tests": 100,
+        "outlier_threshold": 2.0,
+        "programming_language": "C++",
+        "process_measured": "Static Memory Access",
+        "average_time": 2.6997549999999997,
+        "std_deviation": 0.927547921605671
+    },
+    {
+        "array_size": 100000,
         "number_of_tests": 100,
         "passed_tests": 98,
         "outlier_threshold": 2.0,
         "programming_language": "C++",
         "process_measured": "Static Memory Access",
-        "average_time": 1.2926734693877557,
-        "std_deviation": 0.13714085753826505
+        "average_time": 1.5294669387755107,
+        "std_deviation": 0.07687150807610198
     },
     {
-        "array_size": 100000,
+        "array_size": 1000000,
         "number_of_tests": 100,
         "passed_tests": 97,
         "outlier_threshold": 2.0,
         "programming_language": "C++",
         "process_measured": "Static Memory Access",
-        "average_time": 1.4137817525773202,
-        "std_deviation": 0.10153596520912718
-    },
-    {
-        "array_size": 1000000,
-        "number_of_tests": 100,
-        "passed_tests": 98,
-        "outlier_threshold": 2.0,
-        "programming_language": "C++",
-        "process_measured": "Static Memory Access",
-        "average_time": 1.4179338571428575,
-        "std_deviation": 0.06584298297526953
+        "average_time": 1.5519919175257728,
+        "std_deviation": 0.10445465309091652
     },
     {
         "array_size": 10000000,
         "number_of_tests": 100,
-        "passed_tests": 98,
+        "passed_tests": 99,
         "outlier_threshold": 2.0,
         "programming_language": "C++",
         "process_measured": "Static Memory Access",
-        "average_time": 1.4504678244897955,
-        "std_deviation": 0.09297703529219531
+        "average_time": 1.5081817242424245,
+        "std_deviation": 0.0623517588649976
     }
 ]
